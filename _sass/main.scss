@@ -1,0 +1,24 @@
+html, body{
+    height: 100%;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+main{
+    min-height: calc(100% - 124.4px - 64px); /* minus height of header and footer */
+}
+
+p{
+    margin: 0px;
+}
+
+.header-title{
+    font-family: 'Monofett', cursive;
+    text-shadow: 0px 1.5px #8d8c8c;
+}
+
+@media screen and (max-width: 770px){
+    .project-metrics {
+        padding-top: 0px !important;
+        text-align: left !important;
+    }
+}

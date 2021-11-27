@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="container-sm">
+    <a href="/index.html">&lt;&lt; Back to projects</a>
+
+    <div class="mb-5">
+        <div class="display-2">{{ page.name }}</div>
+        <div>
+            <div class="fs-3">{{ page.time }}</div>
+            <div class="project-tags">
+                {% for tag in project.tags %}
+                    {{ tag }}{% if forloop.last %}{% else %},{% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="fs-5">
+        {{ content }}    
+    </div>
+        
+</div>
+
