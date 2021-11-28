@@ -1,17 +1,17 @@
 ---
 layout: default
 title: Yo it's Ashley
+permalink: /
 ---
 
-<div class="display-1">Currently on a new site design right now! Check out the about page!</div>
 {% for project in site.projects %}
-<div class="project-block mx-auto" style="max-width: 560px;">
-    <div class="row py-1">
+<div class="project-block mx-auto" style="max-width: 700px;">
+    <div class="row py-1 my-4">
         <div class="col">
                 <a href="{{ project.url }}" class="text-decoration-none fs-1 lh-1">{{ project.name }}</a><br>
-                {{ project.excerpt}}
+                {{ project.description }}
         </div>
-        <div class="col-md-auto text-end pt-1 project-metrics">
+        <div class="col-md-4 text-end pt-1 project-metrics">
             <div class="fs-5 fw-bold">
                 {{ project.time }}
             </div>
