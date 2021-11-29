@@ -26,9 +26,31 @@ p{
     }
 }
 
+.feature-projects{
+    a{
+        color: #038103;
+
+        &:hover{
+            color: #04a004;
+        }
+    }
+}
+
+// .tag{
+    
+// }
+
 @media screen and (max-width: 770px){
     .project-metrics {
         padding-top: 0px !important;
         text-align: left !important;
     }
+}
+
+.project-page{
+
+    img{
+        width: 100%;
+    }
+
 }

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="mx-auto mb-5" style="max-width: 750px;">
+<div class="mx-auto mb-5 project-page" style="max-width: 750px;">
     <a href="/index.html">&lt;&lt; Back to projects</a>
 
     <div class="my-5 text-center">
@@ -15,6 +15,11 @@ layout: default
                 {% else %}
                     {{ page.time }}
                 {% endif %}
+            </div>
+            <div class="py-3">
+                <a href="https:/www.github.com/brainuser5705/{{ page.github_repo }}">
+                    <img src="/assets/images/GitHub-Mark-64px.png" style="height: 2em; width:auto;">
+                </a>
             </div>
             <div class="project-tags">
                 {% for tag in project.tags %}

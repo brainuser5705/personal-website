@@ -4,30 +4,53 @@ title: Yo it's Ashley
 permalink: /
 ---
 
-{% for project in site.projects %}
-<div class="project-block mx-auto" style="max-width: 700px;">
-    <div class="row py-1 my-4">
-        <div class="col">
-                <a href="{{ project.url }}" class="text-decoration-none fs-1 lh-1">{{ project.name }}</a><br>
-                {{ project.description }}
-        </div>
-        <div class="col-md-4 text-end pt-1 project-metrics">
-            <div class="fs-5 fw-bold">
-                {{ project.time }}
-            </div>
-            <div class="project-tag fst-italic">
-                {% for tag in project.tags %}
-                    {{ tag }}{% if forloop.last %}{% else %},{% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
-{% endfor %}
+{% assign projects = site.projects %}
 
-<!--
-    {% assign filtered_projects = site.projects | where_exp:"item", "item.tags contains 'potato'" %}
-{% for project in filtered_projects %}
-    <div><a href="{{ project.url }}">{{ project.name }}</a></div>
-{% endfor %}
--->
+<div class="project-block mx-auto" style="max-width: 700px;">
+
+    {% assign feature_projects = projects | where_exp:"project", "project.tags contains 'feature'" %}
+    {% for project in feature_projects %}
+        <div class="row py-1 my-4 feature-projects">
+            <div class="col">
+                    <a href="{{ project.url }}" class="text-decoration-none fs-1 lh-1">{{ project.name }}</a><br>
+                    {{ project.description }}
+            </div>
+            <div class="col-md-4 text-end pt-1 project-metrics">
+                <div class="fs-5 fw-bold">
+                    {{ project.time }}
+                </div>
+                <div class="project-tag fst-italic">
+                    {{ project.tags | join: ','}}
+                </div>
+                <!-- {% for tag in project.tags %}
+                    <button class="tag">
+                        {{ tag }}
+                    </button>
+                {% endfor %} -->
+            </div>
+        </div>
+    {% endfor %}
+
+    <hr>
+
+    {% for project in projects %}
+    {% unless project.tags contains 'feature' %}
+    <div class="project-block mx-auto" style="max-width: 700px;">
+        <div class="row py-1 my-4">
+            <div class="col">
+                    <a href="{{ project.url }}" class="text-decoration-none fs-1 lh-1">{{ project.name }}</a><br>
+                    {{ project.description }}
+            </div>
+            <div class="col-md-4 text-end pt-1 project-metrics">
+                <div class="fs-5 fw-bold">
+                    {{ project.time }}
+                </div>
+                <div class="project-tag fst-italic">
+                    {{ project.tags | join: ','}}
+                </div>
+            </div>
+        </div>
+    {% endunless %}
+    {% endfor %}
+
+</div>
