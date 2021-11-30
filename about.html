@@ -16,7 +16,9 @@ layout: default
         <h1 class="fw-bold">Socials</h1>
         <hr>
         {% for social in site.data.socials %}
-            <img src="{{ social.icon }}"> <a href="{{ social.link }}" target="_blank">{{ social.username }}</a>
+            <div>
+                <img src="{{ social.icon }}"> <a href="{{ social.link }}" target="_blank">{{ social.username }}</a>
+            </div>
         {% endfor %}    
     </div>
 

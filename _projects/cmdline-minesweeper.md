@@ -2,6 +2,7 @@
 name: cmdline-minesweeper
 description: A command line Minesweeper clone
 time: March 2021
+date: 2021-03-01
 tags: feature java
 github_repo: cmdline-minesweeper
 permalink: /cmdline-minesweeper

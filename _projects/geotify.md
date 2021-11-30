@@ -2,6 +2,7 @@
 name: Geotify
 description: Analyze your Spotify listening history geodata!
 time: November 2021
+date: 2021-11-01
 tags: python api data web-dev
 permalink: /geotify
 ---

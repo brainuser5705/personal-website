@@ -4,11 +4,11 @@ title: Yo it's Ashley
 permalink: /
 ---
 
-{% assign projects = site.projects %}
+{% assign projects = site.projects | sort="time" %}
 
 <div class="project-block mx-auto" style="max-width: 700px;">
 
-    {% assign feature_projects = projects | where_exp:"project", "project.tags contains 'feature'" %}
+    {% assign feature_projects = site.projects | where_exp:"project", "project.tags contains 'feature'" %}
     {% for project in feature_projects %}
         <div class="row py-1 my-4 feature-projects">
             <div class="col">
@@ -19,12 +19,12 @@ permalink: /
                 <div class="fs-5 fw-bold">
                     {{ project.time }}
                 </div>
-                <div class="project-tag fst-italic">
+                <div class="project-tag text-muted fst-italic">
                     {{ project.tags | join: ','}}
                 </div>
                 <!-- {% for tag in project.tags %}
-                    <button class="tag">
-                        {{ tag }}
+                    <button class="tag btn btn-primary p-1 mb-1">
+                        <a href="/filter-{{ tag }}">{{ tag }}</a>
                     </button>
                 {% endfor %} -->
             </div>
@@ -33,7 +33,7 @@ permalink: /
 
     <hr>
 
-    {% for project in projects %}
+    {% for project in site.projects %}
     {% unless project.tags contains 'feature' %}
     <div class="project-block mx-auto" style="max-width: 700px;">
         <div class="row py-1 my-4">
@@ -45,7 +45,7 @@ permalink: /
                 <div class="fs-5 fw-bold">
                     {{ project.time }}
                 </div>
-                <div class="project-tag fst-italic">
+                <div class="project-tags text-muted fst-italic">
                     {{ project.tags | join: ','}}
                 </div>
             </div>
@@ -53,4 +53,8 @@ permalink: /
     {% endunless %}
     {% endfor %}
 
+    <span><a href="/potential_projects.html">View a list of potential projects I have in store...</a></span>
+
 </div>
+
+<hr>

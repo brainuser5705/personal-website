@@ -36,9 +36,18 @@ p{
     }
 }
 
-// .tag{
+.tag{
+
+    a{
+        text-decoration: none;
+        color: white;
+
+        &:hover{
+            color: rgb(173, 173, 173);
+        }
+    }
     
-// }
+}
 
 @media screen and (max-width: 770px){
     .project-metrics {

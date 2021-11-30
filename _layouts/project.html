@@ -21,10 +21,8 @@ layout: default
                     <img src="/assets/images/GitHub-Mark-64px.png" style="height: 2em;">
                 </a>
             </div>
-            <div class="project-tags">
-                {% for tag in project.tags %}
-                    {{ tag }}{% if forloop.last %}{% else %},{% endif %}
-                {% endfor %}
+            <div class="project-tags text-muted">
+                {{ page.tags | join: ','}}
             </div>
         </div>
     </div>

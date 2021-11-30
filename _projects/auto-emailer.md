@@ -2,6 +2,7 @@
 name: auto-emailer
 description: Python script to automate mass emailing tasks for my supplemental instructor job
 time: September 2021
+date: 2021-09-10
 tags: feature tool python api
 permalink: /auto-emailer
 ---
