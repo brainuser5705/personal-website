@@ -1,6 +1,8 @@
 collections:
   projects:
     output: true
+  potentials:
+    output: true
 
 defaults:
   - scope:
@@ -8,3 +10,8 @@ defaults:
       type: "projects"
     values:
       layout: "project"
+  - scope:
+      path: ""
+      type: "potentials"
+    values:
+      layout: "potential"

@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="mx-auto" style="max-width: 750px;">
+    <a href="/">&lt;&lt; Back to main projects</a>
+
+    <div class="row m-5 gy-3 data-masonry='{'percentPosition': true }'">
+        {% for project in site.potentials %}
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ project.image }}" class="card-img-top">
+                    <div class="card-body">
+                        <a href="{{ project.permalink }}"><h5 class="card-title">{{ project.name }}</h5></a>
+                        {% if project.time %}
+                            <div class="text-muted"><b>Planning:</b> {{ project.time }}</div>
+                        {% endif %}
+                        <p class="card-text">{{ project.description }}</p>
+                    </div>
+                </div>    
+            </div>
+        {% endfor %}
+    </div>
+
+</div>

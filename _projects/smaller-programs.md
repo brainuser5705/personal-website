@@ -1,6 +1,7 @@
 ---
 name: smaller programs
 description: smaller programs that I have made as a coding exercise or for fun
+time:
 permalink: /smaller-programs
 ---
 
