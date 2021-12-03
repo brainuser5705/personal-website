@@ -4,8 +4,6 @@ title: Yo it's Ashley
 permalink: /
 ---
 
-{% assign projects = site.projects %}
-
 <div class="project-block mx-auto" style="max-width: 700px;">
 
     {% assign feature_projects = site.projects | where_exp:"project", "project.tags contains 'feature'" %}
@@ -34,23 +32,23 @@ permalink: /
     <hr>
 
     {% for project in site.projects %}
-    {% unless project.tags contains 'feature' %}
-    <div class="project-block mx-auto" style="max-width: 700px;">
-        <div class="row py-1 my-4">
-            <div class="col">
-                    <a href="{{ project.url }}" class="text-decoration-none fs-1 lh-1">{{ project.name }}</a><br>
-                    {{ project.description }}
-            </div>
-            <div class="col-md-4 text-end pt-1 project-metrics">
-                <div class="fs-5 fw-bold">
-                    {{ project.time }}
+        {% unless project.tags contains 'feature' %}
+        <div class="project-block mx-auto" style="max-width: 700px;">
+            <div class="row py-1 my-4">
+                <div class="col">
+                        <a href="{{ project.url }}" class="text-decoration-none fs-1 lh-1">{{ project.name }}</a><br>
+                        {{ project.description }}
                 </div>
-                <div class="project-tags text-muted fst-italic">
-                    {{ project.tags | join: ','}}
+                <div class="col-md-4 text-end pt-1 project-metrics">
+                    <div class="fs-5 fw-bold">
+                        {{ project.time }}
+                    </div>
+                    <div class="project-tags text-muted fst-italic">
+                        {{ project.tags | join: ','}}
+                    </div>
                 </div>
             </div>
-        </div>
-    {% endunless %}
+        {% endunless %}
     {% endfor %}
 
     <span><a href="/potentials.html">View a list of potential projects I have in store...</a></span>

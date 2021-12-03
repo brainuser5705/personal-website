@@ -15,3 +15,8 @@ defaults:
       type: "potentials"
     values:
       layout: "potential"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

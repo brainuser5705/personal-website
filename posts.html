@@ -1,0 +1,24 @@
+---
+layout: default
+title: Ashley's Random Posts
+permalink: /posts
+---
+
+<div class="mx-auto" style="max-width: 700px;">
+
+    <a href="/">&lt;&lt; Back to projects</a>
+    
+    <div class="text-center my-4">
+        <div class="fs-1">Random Writings</div>
+        <div>Random things that I wrote in the past<br>(and present)</div>
+    </div>
+
+    {% for post in site.posts %}
+        <div class="my-4">
+            <a href="{{ post.url }}" class="text-decoration-none fs-1 lh-1">{{ post.title }}</a>
+            <div class="fs-5 text-muted fst-italic">{{ post.date | date: "%B %d, %Y"}}</div>
+            {{ post.excerpt }}
+        </div>
+    {% endfor %}
+    
+</div>
