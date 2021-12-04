@@ -1,4 +1,8 @@
-Like the title says, I want to improve my vocabulary. I want to:
+Like the title says, I want to improve my vocabulary. 
+
+----
+
+I want to:
 - use more advanced, expressive words,
 - be more articulate in explaining,
 - and most importantly, be able to read books without stopping every two sentences to look up a word
