@@ -6,23 +6,24 @@ layout: default
 
     <a href="/">&lt;&lt; Back to main projects</a>
 
-    <div class="mt-5">
-        <div class="row gy-3 data-masonry='{'percentPosition': true } mx-auto'">
+    <div class="text-center my-4">
+        <div class="fs-1">Potential Projects</div>
+        <div>A list of projects I would love to work on, but don't have time, don't have the skill, don't have the vision...</div>
+    </div>
+
+    <div class="my-5">
+        <ul>
             {% for project in site.potentials %}
-                <div class="col">
-                    <div class="card mx-auto" style="width: 18rem;">
-                        <img src="{{ project.image }}" class="card-img-top">
-                        <div class="card-body">
-                            <a href="{{ project.permalink }}"><h5 class="card-title">{{ project.name }}</h5></a>
-                            {% if project.time %}
-                                <div class="text-muted"><b>Planning:</b> {{ project.time }}</div>
-                            {% endif %}
-                            <p class="card-text">{{ project.description }}</p>
-                        </div>
-                    </div>    
-                </div>
+            <li>
+                <a href="{{ project.permalink }}">{{ project.name }}</a>
+                {% if project.time %}
+                    <div class="text-muted"><b>Planning:</b> {{ project.time }}</div>
+                {% endif %}
+                <p>{{ project.description }}</p>  
+            </li>
             {% endfor %}
-        </div>
+        </ul>
+        
     </div>
     
 

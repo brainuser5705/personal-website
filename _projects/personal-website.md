@@ -3,6 +3,7 @@ name: Personal Website
 description: My personal website
 time: Forever
 tags: feature web-dev
+icon: \assets\images\favicon-32x32.png
 permalink: /personal-website/
 ---  
   

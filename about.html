@@ -6,14 +6,17 @@ layout: default
 
     <a href="/index.html">&lt;&lt; Back to projects</a>
 
-    <div class="my-5 fs-5">
-        <h1 class="fw-bold">Who is Ashley?</h1>
+    <div class="mt-4">
+        <div class="fs-3 fw-bold">Who am I?</div>
         <hr>
-        I am a computer science student at <a href="https://rit.edu" style="color: orange !important;">RIT</a> trying to survive <del class="text-muted">college</del> life everyday. In my free time, I like to work on software projects, watch random films, and most recently run.
+        I am a computer science student at <a href="https://rit.edu" style="color: orange !important;">RIT</a> trying to survive <del class="text-muted">college</del> life everyday.
+        In my free time, I like to work on software projects and learn more about computer science mainly. 
+        I sometimes like to watch movies and animations (big fan of Fox's Animation Domination), sometimes draw, run, cook, read, and maybe some other things that I can't think of right now.
+
     </div>
 
-    <div class="about-socials my-5 fs-5">
-        <h1 class="fw-bold">Socials</h1>
+    <div class="about-icons mt-4 fs-5">
+        <div class="fs-3 fw-bold">Profiles</div>
         <hr>
         {% for social in site.data.socials %}
             <div>
@@ -22,27 +25,62 @@ layout: default
         {% endfor %}    
     </div>
 
-    <div class="my-5 fs-5">
-        <h1 class="fw-bold">Contact</h1>
+    <div class="mt-4">
+        <div class="fs-3 fw-bold">Contact</div>
         <hr>
         <div class="text-muted"><i>Omg, someone wants to talk to me (⊙.⊙(☉̃ₒ☉)⊙.⊙) ??</i></div>
-        I can be best reached at my school email: <a href="mailto: acl9213@rit.edu">acl9213@rit.edu</a>
+        I can be best reached at my school email: <a href="mailto: acl9213@rit.edu">acl9213@rit.edu</a><br>
+        You can also email me at <a href="mailto: codeuser5705@outlook.com">codeuser5705@outlook.com</a>
     </div>
 
-    <div class="my-5 fs-5">
-        <h1 class="fw-bold">My widgets</h1>
+    <div class="mt-4 fs-5">
+        <div class="fs-3 fw-bold">My widgets</div>
         <hr>
-        <div class="widget">
-            <iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/89388292/activity-summary/e4de983813230be6d69e1879ee35e6de299208d2'></iframe>
-        </div>
-        
-        <div class="widget">
-            <a href="https://data.typeracer.com/pit/profile?user=brainuser5705&ref=badge" target="_top"><img src="https://data.typeracer.com/misc/badge?user=brainuser5705" border="0" alt="TypeRacer.com scorecard for user brainuser5705"/></a>
-        </div>
-        
-        <div class="widget">
-            <iframe src="https://open.spotify.com/embed/playlist/2YIB6A8XzrvNUTbOuN4a03?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        </div>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Strava  <i> (running)</i>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="widget">
+                        <iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/89388292/activity-summary/e4de983813230be6d69e1879ee35e6de299208d2'></iframe>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  TypeRacer <i> (typing speed)</i>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="widget">
+                        <a href="https://data.typeracer.com/pit/profile?user=brainuser5705&ref=badge" target="_top"><img src="https://data.typeracer.com/misc/badge?user=brainuser5705" alt="TypeRacer.com scorecard for user brainuser5705"/></a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Spotify <i> (jams)</i>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="widget">
+                        <iframe src="https://open.spotify.com/embed/playlist/2YIB6A8XzrvNUTbOuN4a03?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
     </div>
+
 </div>

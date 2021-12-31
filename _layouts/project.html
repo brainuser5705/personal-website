@@ -5,29 +5,31 @@ layout: default
 <div class="mx-auto mb-5" style="max-width: 750px;">
     <a href="/">&lt;&lt; Back to projects</a>
 
-    <div class="my-5 text-center">
-        <div class="display-2">{{ page.name }}</div>
+    <div class="my-3 text-center">
+        <div class="fs-1 fw-bold" style="color:{% if page.tags contains 'feature' %}#038103{% else %}#475e9e{% endif %};">
+            <img src="{{page.icon}}" style="height: 1.5em;">{{ page.name }}
+        </div>
         <div>
-            <div class="fs-5 fst-italic">
-                {{ page.description }} 
+            <div class="fw-bold">
                 {% if page.time %}
                     ({{ page.time }})
                 {% else %}
                     {{ page.time }}
                 {% endif %}
             </div>
-            <div class="py-3">
-                <a href="https://www.github.com/brainuser5705/{{ page.github_repo }}">
-                    <img src="/assets/images/GitHub-Mark-64px.png" style="height: 2em;">
-                </a>
-            </div>
-            <div class="project-tags text-muted">
+            {{ page.description }} 
+            <div class="project-tags text-muted fst-italic">
                 {{ page.tags | join: ','}}
+            </div>
+            <div>
+                <a href="https://www.github.com/brainuser5705/{{ page.github_repo }}">
+                    Github Repo
+                </a>
             </div>
         </div>
     </div>
-
-    <div class="fs-5 project-content">
+    <hr>
+    <div class="project-content">
         {{ content }}    
     </div>
         

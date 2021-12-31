@@ -4,6 +4,7 @@ description: Python script to automate mass emailing tasks for my supplemental i
 time: September 2021
 date: 2021-09-10
 tags: feature tool python api
+icon: \assets\images\autoemailer_icon.png
 permalink: /auto-emailer
 ---
 

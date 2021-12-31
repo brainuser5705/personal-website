@@ -8,11 +8,13 @@ permalink: /
 
     {% assign feature_projects = site.projects | where_exp:"project", "project.tags contains 'feature'" %}
     {% for project in feature_projects %}
-        <div class="row py-1 my-4 feature-projects">
-            <div class="col">
-                    <a href="{{ project.url }}" class="text-decoration-none fs-1 lh-1">{{ project.name }}</a><br>
-                    {{ project.description }}
+        <div class="row my-4 feature-projects">
+            <div class="col project-name">
+                {% if project.icon %}<img src="{{ project.icon }}">{% endif %}
+                <a href="{{ project.url }}" class="text-decoration-none fs-1 lh-1">{{ project.name }}</a><br>
+                {{ project.description }}
             </div>
+            
             <div class="col-md-4 text-end pt-1 project-metrics">
                 <div class="fs-5 fw-bold">
                     {{ project.time }}
@@ -34,10 +36,11 @@ permalink: /
     {% for project in site.projects %}
         {% unless project.tags contains 'feature' %}
         <div class="project-block mx-auto" style="max-width: 700px;">
-            <div class="row py-1 my-4">
-                <div class="col">
-                        <a href="{{ project.url }}" class="text-decoration-none fs-1 lh-1">{{ project.name }}</a><br>
-                        {{ project.description }}
+            <div class="row my-4">
+                <div class="col project-name">
+                    {% if project.icon %}<img src="{{ project.icon }}">{% endif %}
+                    <a href="{{ project.url }}" class="text-decoration-none fs-1 lh-1">{{ project.name }}</a><br>
+                    {{ project.description }}
                 </div>
                 <div class="col-md-4 text-end pt-1 project-metrics">
                     <div class="fs-5 fw-bold">
