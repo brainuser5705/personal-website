@@ -14,4 +14,4 @@ defaults:
       path: ""
       type: "potentials"
     values:
-      layout: "potential"
+      layout: "project"

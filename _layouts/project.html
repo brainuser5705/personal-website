@@ -10,20 +10,9 @@ layout: default
             <img src="{{page.icon}}" style="height: 1.5em;">{{ page.name }}
         </div>
         <div>
-            <div class="fw-bold">
-                {% if page.time %}
-                    ({{ page.time }})
-                {% else %}
-                    {{ page.time }}
-                {% endif %}
-            </div>
-            {{ page.description }} 
-            <div class="project-tags text-muted fst-italic">
-                {{ page.tags | join: ','}}
-            </div>
             <div>
                 <a href="https://www.github.com/brainuser5705/{{ page.github_repo }}">
-                    Github Repo
+                    <img src="/assets/images/GitHub-Mark-64px.png" style="height: 1.5em;">
                 </a>
             </div>
         </div>
