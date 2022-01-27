@@ -6,4 +6,4 @@ date: 2021-08-01
 tags: mod game-dev
 ---
 
-Screen captures and development process will be typed out soon!
+Screen captures and development process will be typed out when I find the time. Just imagine Friday Night Funkin but with this: https://www.youtube.com/watch?v=LmERg_vQmCs

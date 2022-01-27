@@ -6,6 +6,7 @@ date: 2021-09-10
 tags: feature tool python api
 icon: \assets\images\autoemailer_icon.png
 permalink: /auto-emailer
+github_repo: auto-emailer
 ---
 
 #### **Backstory**
@@ -22,7 +23,7 @@ A big part of the job is also **<u>marketing</u>** my study sessions. I won't li
 
 #### **Quick Summary On How It Works**
 
-Authorization to use my <code>@rit.edu</code> domain email is done with the Gmail API. The email is a MIMEMultipart object from the <code>email.mime</code> module and is structured with HTML templates. The program inputs the user for the email details and formats the values into the templates as strings. Properties of the email, such as the subject and receiver emails, are set through "dictionary keys" of the MIME object. The emailing list is stored in a CSV file, along with the names of the students, and added the the <code>'bcc'</code> property. The email is then sent with the API.
+Authorization to use my <code>@rit.edu</code> domain email is done with the Gmail API. The email is a MIMEMultipart object from the <code>email.mime</code> module and is structured with HTML templates. The program inputs the user for the email details and formats the values into the templates with Python's built-in string formatting functions. Properties of the email, such as the subject and receiver emails, are set through "dictionary keys" of the MIME object. The emailing list is stored in a CSV file, along with the names of the students, and added to the <code>'bcc'</code> property. The email is then sent with the API.
 
 <br>
 
@@ -35,13 +36,15 @@ I originally used the <code>SMTP</code> module to send out the MIME objects, how
 
 <br>
 
-The way the sending functionality works (aka the <code>send</code> function) is that it parses through the CSV file to get the name and email of the students, loops through emails to add to the <code>'bcc'</code> property of the MIME object email, creates a base64 encoding of the message, and executes the Gmail `send(...).execute` function *(honestly I am not 100% knowledgable on how Gmail API actually sends out the email, you can read more about it on their documentation)*...
+The way the sending functionality works (aka the <code>send</code> function) is it parses through the CSV file to get the name and email of the students, loops through emails to add to the <code>'bcc'</code> property of the MIME object email, creates a base64 encoding of the message, and executes the Gmail `send(...).execute` function *(honestly I am not very knowledgable on how Gmail API actually sends out the email, you can read more about it on their documentation)*...
 
 <br>
 
-...However a problem arises when I want to create custom emails, let's say add a greeting to the student *("Hi John Smith")*, because I am formatting the email, attaching the emailing list, and encoding/sending separately. In order to create custom emails, I would have to create a new `send()` function that formats, attach, and encode/sends an MIME object email for each individual entry in the csv file. I thoughted about making a "all-in-one" function or some interface, but I haven't worked on it since. To make it more extensible, I created a `Message` interface so I can create different types of `Message`s which all share the same `send()` functionality implemented for mass emails.  
+...However a problem arises when I want to create custom emails, let's say adding a greeting to the student *("Hi John Smith")*. In order to create this custom email format, I would have to create a new `send()` function that formats, attach, and encode/sends an MIME object email for each individual entry in the csv file. This is contrary to a mass email where I just need to create one MIME object that is the mass email. I thought about making a "all-in-one" function or some interface, but I haven't worked on it since. To make it more extensible, I created a `Message` interface so I can create different types of `Message`s which all share the same `send()` functionality implemented for mass emails.  
 
 <br>
+
+#### Command line!
 
 The user interface is just a nice colored command line interface using the `colorama` and `termcolor` module which provides functions for printing colored text on the terminal, configured to allow me to backtrack if I ever make a mistake. Here's an image of it:
 

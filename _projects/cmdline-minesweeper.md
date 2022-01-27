@@ -7,6 +7,7 @@ tags: feature java
 github_repo: cmdline-minesweeper
 icon: https://github.com/brainuser5705/minesweeper-gui/blob/main/src/gui/resources/mine.png?raw=true
 permalink: /cmdline-minesweeper
+github_repo: cmdline-minesweeper
 ---
 
 ### How it works

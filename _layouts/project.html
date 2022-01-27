@@ -7,13 +7,15 @@ layout: default
 
     <div class="my-3 text-center">
         <div class="fs-1 fw-bold" style="color:{% if page.tags contains 'feature' %}#038103{% else %}#475e9e{% endif %};">
-            <img src="{{page.icon}}" style="height: 1.5em;">{{ page.name }}
+            <img src="{{page.icon}}" style="vertical-align: center; height: 1.5em;">{{ page.name }}
         </div>
         <div>
             <div>
-                <a href="https://www.github.com/brainuser5705/{{ page.github_repo }}">
-                    <img src="/assets/images/GitHub-Mark-64px.png" style="height: 1.5em;">
-                </a>
+                {% if page.github_repo %}
+                    <a href="https://www.github.com/brainuser5705/{{ page.github_repo }}">
+                        <img src="/assets/images/GitHub-Mark-64px.png" style="height: 1.5em;">
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>

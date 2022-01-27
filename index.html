@@ -5,12 +5,12 @@ permalink: /
 ---
 
 <div class="project-block mx-auto" style="max-width: 700px;">
-
+    <h1 class="display-5 text-center">Featured Projects</h1>
     {% assign feature_projects = site.projects | where_exp:"project", "project.tags contains 'feature'" %}
     {% for project in feature_projects %}
         <div class="row my-4 feature-projects">
             <div class="col">
-                {% if project.icon %}<img src="{{ project.icon }}" style="height: 2em;">{% endif %}
+                {% if project.icon %}<img src="{{ project.icon }}" style="vertical-align: center; height: 2em;">{% endif %}
                 <a href="{{ project.url }}" class="text-decoration-none fs-1 lh-1">{{ project.name }}</a><br>
                 {{ project.description }}
             </div>
@@ -33,6 +33,7 @@ permalink: /
 
     <hr>
 
+    <h1 class="display-5 text-center">Other Projects</h1>
     {% for project in site.projects %}
         {% unless project.tags contains 'feature' %}
         <div class="project-block mx-auto" style="max-width: 700px;">
@@ -53,8 +54,6 @@ permalink: /
             </div>
         {% endunless %}
     {% endfor %}
-
-    <span><a href="/potentials.html">View a list of potential projects I have in store...</a></span>
 
 </div>
 

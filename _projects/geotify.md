@@ -85,4 +85,8 @@ The Django frameworks has a sessions backend readily available for use. All I ha
 
 ## AJAX Request
 
-For loading screen
+Because of the API request limits by time, I can only ping the APIs so much before I can get banned. That also means that generating the data will take long. As of now, Musicbrainz limits their requests to *1 per second*. So that means if you have 100 unique artists, your generation will take at least more than 100 seconds. So instead of keeping the users on the same screen for 100 seconds, Geotify uses AJAX for asynchronous requests while the screen is updated to a loading page. 
+
+<br>
+
+**More will be added as I work on the project.**
