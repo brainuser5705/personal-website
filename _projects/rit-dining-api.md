@@ -7,7 +7,7 @@ permalink: /rit-dining-api
 image: https://www.rit.edu/fa/diningservices/sites/rit.edu.fa.diningservices/files/styles/dining_loc_lg/public/ArtesanoView.jpg?itok=4lassH_0
 ---
 
-# WORK IN PROGRESS!
+# PAUSED
 
 Check out the [Notion notebook](https://petalite-subway-eb3.notion.site/RIT-Dining-API-18031e24752c4db38dc15d894fd4b3f1) for progress!
 

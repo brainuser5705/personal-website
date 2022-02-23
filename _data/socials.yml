@@ -7,3 +7,9 @@
 - link: https://ashleyliew.com/blog
   username: my blog page
   icon: /assets/images/favicon-32x32.png
+- link: https://people.rit.edu/~acl9213
+  username: Intro to Maker Culture course page
+  icon: /assets/images/drawing.png
+- link: https://status.ashleyliew.com
+  username: my retired status update page (takes a while to load up, also insecure connection)
+  icon: /assets/images/favicon-32x32.png

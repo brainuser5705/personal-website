@@ -63,7 +63,7 @@ I had experience with the Django framework for a now defuncted project and wante
 - Own domain (removed for new version)
 
 **Development Process**  
-My intentions of creating this version was to create a website "from scratch", using pure HTML/CSS and PHP. I came across the LAMP technology stack and started researching. Before starting, I had to learn PHP and re-learn SQL. I used XAMPP as a development environment with its built-in Apache and MariaDB. After that, I tried hosting it on my own Linux machine, but switched to Heroku. With Heroku hosting, I had to substantially change the backend design of my website including reworking file upload processes intended for my projects and blogs. You can read more about it in the link provided under Features. 
+My intentions of creating this version was to create a website "from scratch", using pure HTML/CSS and PHP. I came across the LAMP technology stack and started researching. Before starting, I had to learn PHP and re-learn SQL. I used XAMPP as a development environment with its built-in Apache and MariaDB. After that, I tried hosting it on my own Linux machine, but switched to Heroku. With Heroku hosting, I had to substantially change the backend design of my website including reworking file upload processes intended for my projects and blogs. Here is the [dev log](https://docs.google.com/document/d/1SA3ubiG70d9M1Hqk-DVgXof6wn9dMNGebQ_Oc5kBN2c/edit?usp=sharing) that I kept.
 
 ---
 
