@@ -3,16 +3,12 @@ name: cmdline-minesweeper
 description: A command line Minesweeper clone
 time: March 2021
 date: 2021-03-01
-tags: feature java
+tags: java
 github_repo: cmdline-minesweeper
 icon: https://github.com/brainuser5705/minesweeper-gui/blob/main/src/gui/resources/mine.png?raw=true
 permalink: /cmdline-minesweeper
 github_repo: cmdline-minesweeper
 ---
-
-### How it works
-
-Uses Java
 
 ### Timeline
 
@@ -21,7 +17,7 @@ Uses Java
 ----
 
 1. **First run successful run! Right now the progam is able to generate a field with all the mines and numbers.**  
-![](/assests/images/cmdline_minesweeper_images/first-run.png)  
+![](/assets/images/cmdline_minesweeper_images/first-run.png)  
 
 2. **Top is the what the game displays as its current state (none of the blocks are revealed). Bottom is the actual content of the block.**  
 ![](/assets/images/cmdline_minesweeper_images/second-run.png)  

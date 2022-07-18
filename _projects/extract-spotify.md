@@ -3,7 +3,7 @@ name: Extract Spotify
 description: Pandas and Bokeh program to visualize display Spotify listening history
 time: January 2021
 date: 2021-01-01
-tags: feature python data
+tags: python data
 github_repo: extract-spotify
 permalink: /extract-spotify/
 ---
