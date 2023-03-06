@@ -1,12 +1,12 @@
 - link: https://github.com/brainuser5705
   username: Github
   icon: /assets/images/GitHub-Mark-64px.png
-- link: https://www.kaggle.com/brainuser5705
-  username: Kaggle
-  icon: https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/189_Kaggle-512.png
-- link: https://ashleyliew.com/blog
-  username: my blog page
-  icon: /assets/images/favicon-32x32.png
+# - link: https://www.kaggle.com/brainuser5705
+#   username: Kaggle
+#   icon: https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/189_Kaggle-512.png
+# - link: https://ashleyliew.com/blog
+#   username: my blog page
+#   icon: /assets/images/favicon-32x32.png
 - link: https://people.rit.edu/~acl9213
   username: Intro to Maker Culture course page
   icon: /assets/images/drawing.png
@@ -16,3 +16,6 @@
 - link: https://www.youtube.com/@ashleyliew1727
   username: YouTube Channel
   icon: https://www.freepnglogos.com/uploads/youtube-logo-hd-8.png
+- link: https://app.simplenote.com/p/b9b4LV
+  username: project ideas list
+  icon: 
