@@ -3,7 +3,7 @@ name: Brainf**k Interpreter
 description: making an interpreter for the Brainf**k programming language
 time: May 2022
 date: 2022-05-12
-tags: python feature
+tags: python programming-languages
 permalink: /brainfuck-interpreter
 github_repo: /cell-notes
 ---
