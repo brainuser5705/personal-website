@@ -1,9 +1,9 @@
 ---
 name: Seinfeld Calendar
-description: (mostly) pure Javascript digital Seinfeld Calendar for M&T Hack and Meet
+description: (mostly) pure Javascript digital Seinfeld Calendar [M&T Hack and Meet submission]
 time: November 2022
 date: 2022-11-01
-tags: tool javascript
+tags: tool javascript hackathon
 icon: 
 permalink: /seinfeld-calendar
 github_repo: seinfield
