@@ -1,9 +1,9 @@
 ---
 name: Inventori
-description: practical grocercy inventory management system for me and my roommate [WicHacks submission]
+description: practical grocery inventory management system for me and my roommate [WicHacks submission]
 time: March 2023
 date: 2023-03-01
-tags: javascript arduino feature
+tags: javascript arduino hackathon
 ext_github_repo: https://github.com/zmb6893/inventori
 permalink:
 ---

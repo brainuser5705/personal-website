@@ -3,7 +3,7 @@ name: Minesweeper GUI
 description: GUI of Minesweeper clone
 time: April 2021
 date: 2021-04-01
-tags: feature java
+tags: java
 icon: https://github.com/brainuser5705/minesweeper-gui/blob/main/src/gui/resources/rose_playing.png?raw=true
 github-repo: minesweeper-gui
 permalink: /minesweeper-gui/
