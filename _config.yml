@@ -15,6 +15,7 @@ defaults:
       type: "past"
     values:
       layout: "project"
+      icon: https://picsum.photos/530/150
   - scope:
       path: "_past/hackathon" 
       type: "past"
