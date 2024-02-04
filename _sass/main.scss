@@ -13,21 +13,37 @@ main{
     min-height: calc(100% - 220px);
 }
 
-section{
-    margin: 6vh 0%;
+p{
+    font-size: 1.5em;
+    margin: 1em 0%;
 }
 
-h1{
+.project-page-header{
+
+    margin-top: 6vh;
+
+    .project-page-banner{
+        width: 100%;
+        height: 15vh;
+        object-fit: cover;
+        border: 1px solid;
+    }
+}
+
+section{
+    margin: 6vh auto;
+}
+
+.project-page{
+    font-size: 1em;
+}
+
+.section-heading{
     font-family: 'Monofett', cursive;
     text-shadow: 0.5px 1px #8d8c8c;
     font-size: 5vh;
     text-align: center;
     margin: 10px 0px;
-}
-
-p{
-    font-size: 1.5em;
-    margin: 1.5em 0px;
 }
 
 .header-title{
@@ -49,16 +65,9 @@ p{
 
 .project{
     
-    // font-family: 'Share Tech Mono', monospace;
     font-family: 'Inclusive Sans', sans-serif;
     border: 1px solid;
     margin: auto;
-    // width: 80%;
-
-    // set for all columns
-    > *{
-        max-height: 200px;
-    }
 
     .project-description{
         border-right: 1px solid;
@@ -70,18 +79,19 @@ p{
     .project-image{
 
         padding: 0px;
-        // background-color: #234297;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         
     }
 }
 
 .project-content{
+
+    margin: auto;
+    margin-top: 5vh;
+
+    font-size: 1.5em;
 
     img{
         width: 100%;
@@ -90,14 +100,9 @@ p{
 
 .tag{
 
-    a{
-        text-decoration: none;
-        color: white;
-
-        &:hover{
-            color: rgb(173, 173, 173);
-        }
-    }
+    border: 1.5px solid;
+    border-radius: 0.5em;
+    padding: 0.1em 0.3em;
     
 }
 

@@ -1,10 +1,8 @@
 ---
 name: FNF Chromatic Scale
 description: FNF Boyfriend piano in vanilla JS
-time: May 2022
-date: 2022-05-13
-tags: javascript css html
-permalink: /fnf-chromatic-scale
+time: 2022-05
+tech: js css html
 github_repo: /fnf-chromatic
 ---
 

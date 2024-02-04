@@ -1,12 +1,10 @@
 ---
 name: cmdline-minesweeper
 description: A command line Minesweeper clone
-time: March 2021
-date: 2021-03-01
-tags: java
+time: 2021-03
+tech: java
 github_repo: cmdline-minesweeper
 icon: https://github.com/brainuser5705/minesweeper-gui/blob/main/src/gui/resources/mine.png?raw=true
-permalink: /cmdline-minesweeper
 github_repo: cmdline-minesweeper
 ---
 

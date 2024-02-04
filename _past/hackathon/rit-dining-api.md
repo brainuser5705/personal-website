@@ -1,9 +1,8 @@
 ---
 name: RIT Dining API
 description: Webscrapes RIT online dining menus and interfaces data with an API
-time: December 2021
-tags: api web-dev webscraping data collab
-permalink: /rit-dining-api
+time: 2021-12
+tech: python flask beautifulsoup
 github: /rit-dining-api-no-db
 image: https://www.rit.edu/fa/diningservices/sites/rit.edu.fa.diningservices/files/styles/dining_loc_lg/public/ArtesanoView.jpg?itok=4lassH_0
 ---

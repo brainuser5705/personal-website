@@ -1,12 +1,7 @@
 ---
-name: smaller programs
-description: smaller programs that I have made as a coding exercise or for fun
-time:
-permalink: /smaller-programs
----
-
-As the description goes, these are smaller programs that don't serve any purpose besides one-time entertainment or coding practice.
-
+name: small programs
+description: small programs that I have made when I was starting out
+time: 2020
 ---
 
 - [Monty Hall Problem](https://github.com/brainuser5705/monty-hall-problem)

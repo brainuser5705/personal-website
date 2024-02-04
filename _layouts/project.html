@@ -2,32 +2,41 @@
 layout: default
 ---
 
-<div class="mx-auto mb-5" style="max-width: 750px;">
-    <a href="/">&lt;&lt; Back to projects</a>
-
-    <div class="my-3 text-center">
-        <div class="fs-1 fw-bold" style="color:{% if page.tags contains 'feature' %}#038103{% else %}#475e9e{% endif %};">
-            <img src="{{page.icon}}" style="vertical-align: center; height: 1.5em;">{{ page.name }}
+<div class="project-page mx-auto" style="max-width: 900px;">
+    <div class="project-page-header">
+        {% if page.icon %}
+            <img class="project-page-banner" src="{{page.icon}}">
+        {% endif %}
+        <div class="display-2 mt-3 fw-bold">
+            {{ page.name }}
         </div>
-        <div>
-            <div>
-                {% if page.github_repo %}
-                    <a href="https://www.github.com/brainuser5705/{{ page.github_repo }}">
-                        <img src="/assets/images/GitHub-Mark-64px.png" style="height: 1.5em;">
-                    </a>
-                {% endif %}
-                {% if page.ext_github_repo %}
-                    <a href="{{ page.ext_github_repo }}">
-                        <img src="/assets/images/GitHub-Mark-64px.png" style="height: 1.5em;">
-                    </a>
-                {% endif %}
-            </div>
+        <div class="display-6 fst-italic">
+            {{ page.description}}
         </div>
+        <div class="mt-4 fs-2 fst-italic">
+            Created ~ {{ page.time }} <br>
+            {% if page.tech %}Tech Used ~ {{ page.tech | split: " " | join: ", " }}{% endif %}
+        </div>
+        
+        
     </div>
     <hr>
-    <div class="project-content">
-        {{ content }}    
+    <div class="project-content" style="max-width: 850px;">
+        {{ content }}
     </div>
-        
-</div>
 
+    <div>
+        {% if page.github_repo %}
+        <a href="https://www.github.com/brainuser5705/{{ page.github_repo }}">
+            <img src="/assets/images/GitHub-Mark-64px.png" style="height: 1.5em;">
+        </a>
+        {% endif %}
+        {% if page.ext_github_repo %}
+        <a href="{{ page.ext_github_repo }}">
+            <img src="/assets/images/GitHub-Mark-64px.png" style="height: 1.5em;">
+        </a>
+        {% endif %}
+    </div>
+
+
+</div>

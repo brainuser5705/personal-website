@@ -1,15 +1,13 @@
 ---
 name: auto-emailer
 description: Python script to automate mass emailing tasks for my supplemental instructor job
-time: September 2021
-date: 2021-09-10
-tags: tool python api
-icon: \assets\images\autoemailer_icon.png
-permalink: /auto-emailer
+time: 2021-09
+tech: python gmail-api
+icon: /assets/images/autoemailer_icon.png
 github_repo: auto-emailer
 ---
 
-#### **Backstory**
+# **Backstory**
 
 In the fall 2021 semester, I worked as an Supplemental Instructor for RIT's Academic Success Center. I supported GCIS-123, or Software Development and Problem Solving I, and my job was to hold study sessions for the students so they could review and engaged with the material outside of class. It's different from recitation in that I'm not lecturing, rather I'm creating [interactive activites](https://github.com/brainuser5705/gcis-123-si-sessions) for the students. 
 \

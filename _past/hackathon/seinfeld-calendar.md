@@ -1,11 +1,9 @@
 ---
 name: Seinfeld Calendar
 description: (mostly) pure Javascript digital Seinfeld Calendar [M&T Hack and Meet submission]
-time: November 2022
-date: 2022-11-01
-tags: tool javascript hackathon
+time: 2022-11
+tech: js
 icon: 
-permalink: /seinfeld-calendar
 github_repo: seinfield
 ---
 
@@ -32,7 +30,7 @@ Here's a list of things we did during the hackathon:
 - worked a Concessions shift mid-hackathon
 - trying to figure out how to import external Javascript files into a Javascript
   file
-- ended up including everything in `<script>` tags in the HTML file instead
+- ended up including everything in `<script>` tech in the HTML file instead
 - ate probably 100 grams of sugar to go through the night
 - ended up staying awake for > 24 hours
 - bought back two pans of just bread, another pan of vegan hotdogs, and a few
