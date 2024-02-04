@@ -95,7 +95,7 @@ permalink: /
                                 {% endif %}
                             </div>
                         </div>
-                        <div class="col-md-7 project-image" style="background-image: url({{project.icon}});">
+                        <div class="col-md-7 project-image" style="background-image: url({{project.icon}}); {% if project.icon %}min-height: 10vh;{% endif %}"">
                         </div>
                     </div>
                     {% endfor %}
@@ -164,7 +164,7 @@ permalink: /
                                 {% endif %}
                             </div>
                         </div>
-                        <div class="col-md-7 project-image" style="background-image: url({{project.icon}});">
+                        <div class="col-md-7 project-image" style="background-image: url({{project.icon}}); {% if project.icon %}min-height: 10vh;{% endif %}"">
                         </div>
                     </div>
                     {% endfor %}
