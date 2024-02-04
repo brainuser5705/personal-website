@@ -51,22 +51,22 @@ permalink: /
         <div class="accordion" id="projectAccordion">
 
             <div id="projectAccordion-buttons">
-                <button class="btn btn-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#interactive"
-                    aria-expanded="false" aria-controls="interactive">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#interactive"
+                    aria-expanded="false" aria-controls="interactive" onclick="setCookie('interactive')">
                     Interactive
                 </button>
-                <button class="btn btn-primary collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#noninteractive" aria-expanded="false" aria-controls="noninteractive">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#noninteractive" aria-expanded="false" aria-controls="noninteractive" onclick="setCookie('noninteractive')">
                     Non-interactive
                 </button>
-                <button class="btn btn-primary collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#hackathon" aria-expanded="false" aria-controls="hackathon">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#hackathon" aria-expanded="false" aria-controls="hackathon" onclick="setCookie('hackathon')">
                     Hackathon
                 </button>
             </div>
 
             <div id="projectAccordion-lists">
-                <div id="interactive" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+                <div id="interactive" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
                     <p>
                         These projects are completed, deployed and ready to use. For web-based projects, just click on
                         the link!
@@ -128,7 +128,9 @@ permalink: /
                     {% for project in projects %}
                     <div class="row project">
                         <div class="col-md-5 project-description">
-                            <a href="{% if project.permalink %} {{ project.permalink }} {% else %} {{ project.url }} {% endif %}" class="text-decoration-none fs-1 lh-1">{{ project.name
+                            <a href="{% if project.extern %} {{ project.extern }} {% else %} {{ project.url }} {% endif %}" 
+                                {% if project.extern %} target="on_blank" {% endif %}
+                                class="text-decoration-none fs-1 lh-1">{{ project.name
                                 }}</a><br>
                             {{ project.description }}
                             <div class="fs-5 fw-bold">
