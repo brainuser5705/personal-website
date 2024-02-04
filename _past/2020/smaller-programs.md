@@ -1,7 +1,7 @@
 ---
 name: small programs
 description: small programs that I have made when I was starting out
-time: 2020
+time: 2020-01
 ---
 
 - [Monty Hall Problem](https://github.com/brainuser5705/monty-hall-problem)
