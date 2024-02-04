@@ -71,7 +71,7 @@ permalink: /
                         These projects are completed, deployed and ready to use. For web-based projects, just click on
                         the link!
                     </p>
-                    {% assign interactive = site.past | where_exp:"project", "project.permalink and project.hackathon == false" | sort: "time" | reverse %}
+                    {% assign interactive = site.past | where_exp:"project", "project.permalink" | sort: "time" | reverse %}
                     {% for project in interactive %}
                     <div class="row project">
                         <div class="col-md-5 project-description">
