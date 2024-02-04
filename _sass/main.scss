@@ -5,20 +5,35 @@
 
 html, body{
     height: 100%;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Inclusive Sans', sans-serif;
+    // font-family: 'Share Tech Mono', monospace;
 }
 
 main{
-    min-height: calc(100% - 118.4px - 64px); /* minus height of header and footer */
+    min-height: calc(100% - 220px);
+}
+
+section{
+    margin: 6vh 0%;
+}
+
+h1{
+    font-family: 'Monofett', cursive;
+    text-shadow: 0.5px 1px #8d8c8c;
+    font-size: 5vh;
+    text-align: center;
+    margin: 10px 0px;
 }
 
 p{
+    font-size: 1.5em;
     margin: 1.5em 0px;
 }
 
 .header-title{
     
     font-family: 'Monofett', cursive;
+    font-size: 7vh;
     text-shadow: 0.5px 2px #8d8c8c;
 
     a{
@@ -32,13 +47,44 @@ p{
 
 }
 
-.feature-projects{
-    a{
-        color: #038103;
+.project{
+    
+    // font-family: 'Share Tech Mono', monospace;
+    font-family: 'Inclusive Sans', sans-serif;
+    border: 1px solid;
+    margin: auto;
+    // width: 80%;
 
-        &:hover{
-            color: #04a004;
+    // set for all columns
+    > *{
+        max-height: 200px;
+    }
+
+    .project-description{
+        border-right: 1px solid;
+        padding: 1em;
+        // scrollbar-width: none;
+        // overflow-y: scroll;
+    }
+
+    .project-image{
+
+        padding: 0px;
+        // background-color: #234297;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
+        
+    }
+}
+
+.project-content{
+
+    img{
+        width: 100%;
     }
 }
 
@@ -55,16 +101,33 @@ p{
     
 }
 
-@media screen and (max-width: 770px){
+#projectAccordion{
+    
+    > * {
+        margin-top: 1em;
+    }
+
+    #projectAccordion-buttons{
+        text-align: center;
+
+        button{
+            background-color: #3654a9;
+            font-size: large;
+
+            // attribute selector
+            &[aria-expanded="true"]{
+                font-size: x-large;
+                background-color: #263d7c;
+            }
+        }
+        
+    }
+    
+}
+
+@media screen and (max-width: 900px){
     .project-metrics {
         padding-top: 0px !important;
         text-align: left !important;
-    }
-}
-
-.project-content{
-
-    img{
-        width: 100%;
     }
 }

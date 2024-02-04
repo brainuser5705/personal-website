@@ -4,58 +4,150 @@ title: Yo it's Ashley
 permalink: /
 ---
 
-<div class="project-block mx-auto" style="max-width: 700px;">
+<div class="project-block mx-auto" style="max-width: 900px;">
 
-    <h1 class="display-5 text-center">Featured Projects</h1>
-    {% assign feature_projects = site.projects | where_exp:"project", "project.tags contains 'feature'" %}
-    {% for project in feature_projects %}
-        <div class="row my-4 feature-projects">
-            <div class="col">
-                {% if project.icon %}<img src="{{ project.icon }}" style="vertical-align: center; height: 2em;">{% endif %}
-                <a href="{{ project.url }}" class="text-decoration-none fs-1 lh-1">{{ project.name }}</a><br>
-                {{ project.description }}
-            </div>
-            
-            <div class="col-md-4 text-end pt-1 project-metrics">
-                <div class="fs-5 fw-bold">
-                    {{ project.time }}
-                </div>
-                <div class="project-tag text-muted fst-italic">
-                    {{ project.tags | join: ','}}
-                </div>
-                <!-- {% for tag in project.tags %}
-                    <button class="tag btn btn-primary p-1 mb-1">
-                        <a href="/filter-{{ tag }}">{{ tag }}</a>
-                    </button>
-                {% endfor %} -->
-            </div>
-        </div>
-    {% endfor %}
+    <section>
+        <h1 style="color: rgb(72, 139, 72)"> I am currently working on:</h1>
+        <p>
+            {% assign page = site.pages | where_exp:"page" , "page.title == 'current'" | first %}
+            {{ page.content }}
+        </p>
+    </section>
 
     <hr>
 
-    <h1 class="display-5 text-center">Other Projects</h1>
-    {% for project in site.projects %}
-        {% unless project.tags contains 'feature' %}
-        <div class="project-block mx-auto" style="max-width: 700px;">
-            <div class="row my-4">
-                <div class="col">
-                    {% if project.icon %}<img src="{{ project.icon }}" style="height: 2em;">{% endif %}
+    <section>
+        <h1 style="color: rgb(117, 117, 117)">On-hold Projects</h1>
+        <div>
+            <p>
+                Projects with promising potential, only if I just have the motivation to complete.
+            </p>
+            {% for project in site.onhold %}
+            <div class="row project">
+                <div class="col-md-5 project-description">
                     <a href="{{ project.url }}" class="text-decoration-none fs-1 lh-1">{{ project.name }}</a><br>
                     {{ project.description }}
-                </div>
-                <div class="col-md-4 text-end pt-1 project-metrics">
                     <div class="fs-5 fw-bold">
                         {{ project.time }}
                     </div>
-                    <div class="project-tags text-muted fst-italic">
-                        {{ project.tags | join: ','}}
+                    <div class="project-tag text-muted fst-italic">
+                        Tech Used: {{ project.tech | join: ','}}
                     </div>
                 </div>
+                <div class="col-md-7 project-image">
+                    {% if project.icon %}<img src="{{ project.icon }}">{% endif %}
+                </div>
             </div>
-        {% endunless %}
-    {% endfor %}
+            {% endfor %}
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h1 style="color: rgb(188, 104, 104)">Past Projects</h1>
+        <h2 class="display-6 text-center">Select by:</h2>
+
+        <div class="accordion" id="projectAccordion">
+
+            <div id="projectAccordion-buttons">
+                <button class="btn btn-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#interactive"
+                    aria-expanded="false" aria-controls="interactive">
+                    Interactive
+                </button>
+                <button class="btn btn-primary collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#noninteractive" aria-expanded="false" aria-controls="noninteractive">
+                    Non-interactive
+                </button>
+                <button class="btn btn-primary collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#hackathon" aria-expanded="false" aria-controls="hackathon">
+                    Hackathon
+                </button>
+            </div>
+
+            <div id="projectAccordion-lists">
+                <div id="interactive" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+                    <p>
+                        These projects are completed, deployed and ready to use. For web-based projects, just click on
+                        the link!
+                    </p>
+                    {% assign interactive = site.past | where_exp:"project", "project.permalink and project.hackathon == false" | sort: "time" | reverse %}
+                    {% for project in interactive %}
+                    <div class="row project">
+                        <div class="col-md-5 project-description">
+                            <a href="{{ project.url }}" class="text-decoration-none fs-1 lh-1">{{ project.name
+                                }}</a><br>
+                            {{ project.description }}
+                            <div class="fs-5 fw-bold">
+                                {{ project.time }}
+                            </div>
+                            <div class="project-tag text-muted fst-italic">
+                                Tech Used: {{ project.tech | join: ','}}
+                            </div>
+                        </div>
+                        <div class="col-md-7 project-image">
+                            {% if project.icon %}<img src="{{ project.icon }}">{% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div id="noninteractive" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                    <p>
+                        These projects are not available. Either they didn't make it past the development stage or I
+                        don't want to bother with the last step of getting them onto the web. <b>The links here are for
+                            documentation purposes.</b>
+                    </p>
+                    {% assign sorted_projects = site.past | sort: "time" | reverse %}
+                    {% for project in sorted_projects %}
+                    {% assign url = project.url | truncate: 8, "" %}
+                    {% if url == "/past/20" %}
+                    <div class="row project">
+                        <div class="col-md-5 project-description">
+                            <a href="{{ project.url }}" class="text-decoration-none fs-1 lh-1">{{ project.name
+                                }}</a><br>
+                            {{ project.description }}
+                            <div class="fs-5 fw-bold">
+                                {{ project.time }}
+                            </div>
+                            <div class="project-tag text-muted fst-italic">
+                                Tech Used: {{ project.tech | join: ','}}
+                            </div>
+                        </div>
+                        <div class="col-md-7 project-image">
+                            {% if project.icon %}<img src="{{ project.icon }}">{% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <div id="hackathon" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                    <p>
+                        Projects made at hackathons
+                    </p>
+                    {% assign projects = site.past | where_exp:"project", "project.hackathon" | sort: "time" | reverse %}
+                    {% for project in projects %}
+                    <div class="row project">
+                        <div class="col-md-5 project-description">
+                            <a href="{% if project.permalink %} {{ project.permalink }} {% else %} {{ project.url }} {% endif %}" class="text-decoration-none fs-1 lh-1">{{ project.name
+                                }}</a><br>
+                            {{ project.description }}
+                            <div class="fs-5 fw-bold">
+                                {{ project.time }}
+                            </div>
+                            <div class="project-tag text-muted fst-italic">
+                                Tech Used: {{ project.tech | join: ','}}
+                            </div>
+                        </div>
+                        <div class="col-md-7 project-image">
+                            {% if project.icon %}<img src="{{ project.icon }}">{% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </section>
+
 
 </div>
-
-<hr>

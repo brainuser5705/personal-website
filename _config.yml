@@ -1,17 +1,22 @@
 collections:
-  projects:
+  onhold:
     output: true
-  potentials:
+  past:
     output: true
 
 defaults:
   - scope:
       path: ""
-      type: "projects"
+      type: "onhold"
     values:
       layout: "project"
   - scope:
       path: ""
-      type: "potentials"
+      type: "past"
     values:
       layout: "project"
+  - scope:
+      path: "_past/hackathon" 
+      type: "past"
+    values:
+      hackathon: true
