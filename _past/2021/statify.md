@@ -1,23 +1,27 @@
 ---
-name: Statify
-description: Analyze your Spotify listening history geodata!
+name: Geotify
+description: Geographize your Spotify listening history by mapping out country of origin
 time: 2021-11
 tech: python spotify-api django
 ---
 
-*Last updated: December 14th, 2021*  
+**Geotify** is a web application that accesses your Spotify listening history geodata. It uses the Spotify API and Last.fm API (for longer listening history).
 
-**Statify** is a web application that is able to "analyze" your Spotify listening history geodata by using the Spotify API, along with APIs from similar services like Last.fm (I quoted *analyze* because technically the only thing it is doing now is data visualization not necessarily data analysis).  
+<img style="border: 1px solid;" src="/assets/images/statify-landing.jpeg"> 
+<p style="text-align:center; font-style:italic;">Landing page</p>
+
+<img style="border: 1px solid;" src="/assets/images/statify-results.jpeg">
+<p style="text-align:center; font-style:italic;">Results page</p>
+
+# About
 
 This project was a way for me to applied what I recently learned about APIs and how to use them. I got familiar with using the concept of `GET`/`POST` requests, attaching parameters into the URL, and using Python's `requests` module. I also got insight into how an API is structured with endpoints, how it is basically a webserver, and how it responses to requests with `JSON` or `XML` data.
 
---- 
+---
 
-# How does Statify work?
+Now I will delve into how it works.
 
-
-
-## Technologies
+# Technologies
 
 Here is the list of tools and services that Statify uses:
 
@@ -26,15 +30,11 @@ Here is the list of tools and services that Statify uses:
 - **Musicbrainz API**: to get the country of origin of the artists
 - **Google Charts**: using their Javascript generated geochart to make the heat map
 
-
-
-## Making requests to the APIs
+# Making requests to the APIs
 
 All the APIs used were REST web APIs, meaning requests are in the form of urls. I used the Python `requests` library with its `get()` and `post()` functions to make the requests. The basic usage of these functions, is passing in the API endpoint to make request to, along with a Python dictionary for the parameters and header.
 
-
-
-## Spotify API Authorization Code Flow
+# Spotify API Authorization Code Flow
 
 The entire process is detailed [here](https://developer.spotify.com/documentation/general/guides/authorization/code-flow/).
 
@@ -46,9 +46,7 @@ All the authorization requests in Statify are made in `stats.spotify.authorizati
 
 Authorization code is requested with the `index` view, and the redirect URI is the `callback` view which then redirects to the `geotify` view where the data is displayed.
 
-
-
-## Musicbrainz API Getting the Country
+# Musicbrainz API - Getting the Country
 
 Since the Spotify doesn't store the country of origin of the artist, I use MusicBrainz and their API. There is no authorization needed for Musicbrainz.
 
@@ -65,33 +63,16 @@ Some artists have an `area` property but its immediate type is not a Country, so
 
 *Only the MBID of the Area is changed in the URL.*
 
-
-
-## Google Charts Heat Map
+# Google Charts Heat Map
 
 I need to get the [ISO codes](https://www.iban.com/country-codes), so I made a very crude web scraper that allows me to get the country name along with its ISO-3166 codes (Alpha-2).   
 
 To create the matrix with the country's ISO code and its artist count, I first get the artist list from the Spotify API. Then for each artist in the list, I will get their country of origin (name and ISO) with the Musicbrainz API. The count is stored in a Python dictionary with the ISO as the key and the count as the value. So I will access the dictionary with the ISO and increment the count. Finally, I convert the dictionary into a 2D list to pass in as a template tag for Django.
 
-
-
-## Sessions
+# Sessions
 
 The Django frameworks has a sessions backend readily available for use. All I have to do is set the `sessions` attribute of the current request/response and pass in the desired value, and Django will store the session in its session database. I am storing the token from the APIs.
 
+# AJAX Request
 
-
-## AJAX Request
-
-Because of the API request limits by time, I can only ping the APIs so much before I can get banned. That also means that generating the data will take long. As of now, Musicbrainz limits their requests to *1 per second*. So that means if you have 100 unique artists, your generation will take at least more than 100 seconds. So instead of keeping the users on the same screen for 100 seconds, Geotify uses AJAX for asynchronous requests while the screen is updated to a loading page. 
-
-
-
-## Some pics
-
-#### Landing page
-![](/assets/images/statify-landing.jpeg)  
-
-
-### After gathering data and loading
-![](/assets/images/statify-results.jpeg)
+Because of the API request limits by time, I can only ping the APIs so much before I can get banned. That also means that generating the data will take long. As of now, Musicbrainz limits their requests to *1 per second*. So that means if you have 100 unique artists, your generation will take at least more than 100 seconds. So instead of keeping the users on the same screen for 100 seconds, Geotify uses AJAX for asynchronous requests while the screen is updated to a loading page.
