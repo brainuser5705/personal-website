@@ -3,7 +3,7 @@ name: Geotify
 description: Geographize your Spotify listening history by mapping out country of origin
 time: 2021-11
 tech: python spotify-api django
-icon: https://imgur.com/kcgYyKA
+icon: https://i.imgur.com/kcgYyKA.jpeg
 ---
 
 **Geotify** is a web application that accesses your Spotify listening history geodata. It uses the Spotify API and Last.fm API (for longer listening history).
