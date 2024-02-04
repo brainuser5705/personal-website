@@ -1,18 +1,22 @@
 ---
-name: cmdline-minesweeper
-description: A command line Minesweeper clone
+name: minesweeper clone
+description: Minesweeper clone in Java
 time: 2021-03
-tech: java
+tech: java javafx
 github_repo: cmdline-minesweeper
 icon: https://github.com/brainuser5705/minesweeper-gui/blob/main/src/gui/resources/mine.png?raw=true
-github_repo: cmdline-minesweeper
+github_repo: minesweeper-gui
 ---
 
-### Timeline
+![](https://i.imgur.com/h7V3gOl.jpeg)
 
-*Here is a rough timeline of cmdline-minesweeper and its features. Unfortunately I didn't put any timestamps, but the project was in active development for about two months.*
+# About
+Around the beginning of 2021, I became a bit obsessed with Minesweeper. It started off with the command line version and after learning JavaFX in CS2 class, I decided to turned it into a GUI. It uses the <code>MVC (Model-View-Controller)</code> design. The GUI is a simple program so extra functionalities like chording, timing or any other features commonly found in Minesweeper clones are not implemented. 
 
-----
+# Timeline
+
+*Here is a rough timeline of the development process. Unfortunately I didn't put any timestamps, but the project was in active development for about two months.*
+
 
 1. **First run successful run! Right now the progam is able to generate a field with all the mines and numbers.**  
 ![](/assets/images/cmdline_minesweeper_images/first-run.png)  

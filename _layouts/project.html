@@ -17,26 +17,17 @@ layout: default
             Created ~ {{ page.time }} <br>
             {% if page.tech %}Tech Used ~ {{ page.tech | split: " " | join: ", " }}{% endif %}
         </div>
-        
-        
+        <div>
+            {% if page.github_repo %}
+            <a href="https://www.github.com/brainuser5705/{{ page.github_repo }}">
+                <img class="my-4" src="/assets/images/GitHub-Mark-64px.png" style="height: 3em;">
+            </a>
+            {% endif %}
+        </div>   
     </div>
     <hr>
     <div class="project-content" style="max-width: 850px;">
         {{ content }}
     </div>
-
-    <div>
-        {% if page.github_repo %}
-        <a href="https://www.github.com/brainuser5705/{{ page.github_repo }}">
-            <img src="/assets/images/GitHub-Mark-64px.png" style="height: 1.5em;">
-        </a>
-        {% endif %}
-        {% if page.ext_github_repo %}
-        <a href="{{ page.ext_github_repo }}">
-            <img src="/assets/images/GitHub-Mark-64px.png" style="height: 1.5em;">
-        </a>
-        {% endif %}
-    </div>
-
 
 </div>
