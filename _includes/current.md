@@ -1,6 +1,6 @@
-I am interested in delving deeper into the way our programs and computers work, using the field of **embedded development** as my compass to see what there is to learn.
+I am interested in delving deeper into how the underlying software and hardware of the tools/applications we use work on at the bit level. Since it's a broad topic, I am using the field of **embedded development** as my compass to see what there is to learn. Along the way, I hope to pick up electrical engineering knowledge and expand my skillset to the physical realm ideally to mechatronics.
 
-Currently, I am building proficiency in the C programming language and learning baremetal programming on the Atmel AVR microcontroller.
+Currently as of 2024.01, I am focusing on building proficiency in the C programming language and learning baremetal programming on the Atmel AVR microcontroller.
 
 It's going to be a very long journey, but here is **a continually updating list of projects that I am doing**: 
 

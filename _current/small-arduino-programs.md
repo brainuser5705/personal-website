@@ -2,7 +2,7 @@
 name: small arduino programs
 description: simons says
 focus: arduino basic-electronics
-time: 2022-02-02
+time: 2024-02
 ---
 
 # Simon Says

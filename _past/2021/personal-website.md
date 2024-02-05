@@ -1,9 +1,8 @@
 ---
 name: Personal Website
 description: My personal website
-time: Forever
-tech: feature web-dev
-icon: \assets\images\favicon-32x32.png
+time: 2021~05
+tech: web-dev
 ---  
   
 Over the past year, I have been developing my personal website and gone through several iterations while I experimented with different web development technologies. Here is a visual timeline of the landing page of my website. I will also include some notes about the features, the languages/technologies I used, and the general development process for each version.
@@ -100,9 +99,3 @@ The backend of the previous version was very insecure and inefficient. After mul
 
 **Development Process**  
 The old version was very messy; I made it without any knowledge on how static site generators like Jekyll work. So I finally read up on the documentation and followed the step-by-step tutorial. I was unhappy with how messy the previous site design was as well, so I stripped it down to the main focus of my site which is to be hub for my projects. It now only has a list of the projects on the landing page and a simple about page.
-
----
-
-__*<u>2021-11-28</u>*__
-
-As you might have noticed, I change my website design a little bit too often (I haven't calculated it, but the average lifespan of a version is probably 2-3 months). The reason why is mostly because I am indecisive, or oxymoronically, too perfect. I plan to have V5 be the last version (or at least for the long term). The way I structured it allows for easy site updates as the only content is projects. I simply upload a markdown file of the project and let the layout templates do the magic. There are a few [features](https://github.com/brainuser5705/brainuser5705.github.io/projects/1) that I want to add to my site, but these can be done later down the road.

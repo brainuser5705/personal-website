@@ -2,7 +2,7 @@
 name: baremetal avr
 description: wiki for things learned as I follow 'Make&#58; AVR Programming' by Elliot Williams
 focus: avr c
-time: 2022-02-02
+time: 2024-02
 ---
 
 # Guides
