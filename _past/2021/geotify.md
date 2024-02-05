@@ -8,11 +8,15 @@ icon: https://i.imgur.com/kcgYyKA.jpeg
 
 **Geotify** is a web application that accesses your Spotify listening history geodata. It uses the Spotify API and Last.fm API (for longer listening history).
 
+<div class="pic">
 <img style="border: 1px solid;" src="/assets/images/statify-landing.jpeg"> 
-<p style="text-align:center; font-style:italic;">Landing page</p>
+Landing page
+</div>
 
+<div class="pic">
 <img style="border: 1px solid;" src="/assets/images/statify-results.jpeg">
-<p style="text-align:center; font-style:italic;">Results page</p>
+Results page
+</div>
 
 # About
 

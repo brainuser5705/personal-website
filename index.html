@@ -9,8 +9,9 @@ permalink: /
     <section>
         <div class="section-heading" style="color: rgb(72, 139, 72)"> I'm currently working on:</div>
         <p>
-            {% assign page = site.pages | where_exp:"page" , "page.title == 'current'" | first %}
-            {{ page.content }}
+            <!-- {% assign page = site.pages | where_exp:"page" , "page.title == 'current'" | first %}
+            {{ page.content }} -->
+            {% include current.md %}
         </p>
     </section>
 

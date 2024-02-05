@@ -5,25 +5,20 @@ time: 2022-05
 tech: python
 ---
 
-# What you need to know before you read
+# Basic steps of creating a programming language
 
-- Basic steps of creating a programming language
-    - phases of interpreting: lexical analysis, semantic analysis, evaluation
-    - tools for each phase: lexer, parser, evaluator  
-    *Follow along Andy Balaam's tutorial with the Cell programming language:*
-        1. [Intro and Lexer](https://accu.org/journals/overload/26/145/balaam_2510/)
-        2. [Parser](https://members.accu.org/index.php/journals/2532)
-        3. [Evaluator](https://members.accu.org/index.php/journals/2565)
-        >*My general review of this tutorial: Gets a bit hard to follow if you don't read the code carefully (I would suggest code it and then go through it line by line), a few missing lines of code (will need to refer to his GitLab repository for them), and missing detail regarding native Python functions in Cell so the code won't work at the end lol. But it gives you a sense of how the code of an interpreter should look like. Overall good tutorial if you're getting started, I essentially based the BF interpreter code off of this tutorial!*
-- [Brainf**k Programming Language](https://esolangs.org/wiki/Brainf**k)
-    - the operations that it has (just need read 'Language Overview in the wiki')
-- Python (duh!)
+The phases of an interpreter and their subsequent tools are:
+1. lexical analysis (lexer)
+2. semantic analysis (parser)
+3.  evaluation (evaluator)
 
----
+I learned this basic framework from Andy Balaam's tutorial with the Cell programming language:
+1. [Intro and Lexer](https://accu.org/journals/overload/26/145/balaam_2510/)
+2. [Parser](https://members.accu.org/index.php/journals/2532)
+3. [Evaluator](https://members.accu.org/index.php/journals/2565)
 
-## Phases of the Interpreter
+>*My general review of this tutorial: Gets a bit hard to follow if you don't read the code carefully (I would suggest code it and then go through it line by line), a few missing lines of code (will need to refer to his GitLab repository for them), and missing detail regarding native Python functions in Cell so the code won't work at the end lol. But it gives you a sense of how the code of an interpreter should look like. Overall good tutorial if you're getting started, I essentially based the BF interpreter code off of this tutorial!*
 
->If you had gone through the Cell programming language tutorial and is now familiar with the three main phases of interpreting a progarmming language, this will be recap.  
 
 Let's tell it in a form of a story (*note: all the outputs are based off the tutorial which is written in Python, but it is not for any specific language*). 
 
@@ -39,20 +34,23 @@ Lexer ouputs [('symbol','x'), ('=',''), ('number',3), ('operation', '+'), ('numb
 ```python
 Parser outputs [('assignment', ('symbol','x'), ('operation','+',('number',3), ('number',4)))]
 ```
-<img src="https://i.imgur.com/yXMKP3D.png" height=150> 
-
-
-Paint MS skills on point.
-
+    <div class="pic">
+    <img src="https://i.imgur.com/yXMKP3D.png" height=150> 
+    Paint MS skills on point.
+    </div>
 4. **Evaluator** goes through the abstract syntax tree and execute the code, using **environments** to store symbols and their values.
 
 So that's essentially what the interpreter does, at least what the tutorial shows.
 
 ---
 
-## How this BF interpreter is broken down
+# Brainkf\*\*k Programming Language
 
-### Lexer
+What makes this language so shocking is that it only compromises of 8 operations each symbolized by only one character. *Read more about this language on this [wiki](https://esolangs.org/wiki/Brainf**k).*
+
+# How this BF interpreter works
+
+## Lexer
 
 Since BF only has 8 operations ( `><+-.,[]` ), the lexer retains that simplicity.
 
@@ -82,7 +80,7 @@ match char:
 
 I could make it like `('shift', 'right'), ('shift', 'left')` but it that would just make the code more complicated then it needs to be. I figure the only case where that would be necessary is if you have tokens that have an infinite amount of *lexemes*, or strings. For instance, the tokens `'number'` or `'string'`.
 
-### Parser
+## Parser
 
 The way the Cell parser works is by looking at the previous token to figure out the meaning of the code (and thus determine whether it is valid). In BF's case, there's not much to check except the **while** symbols `[` and `]`.
 
@@ -104,7 +102,7 @@ match typ:
 
 So what the code does is it spots the `start_while` token and then uses a function called `_get_multiple_expressions()` which continues reading through the tokens to get the expressions within the while loop and stops at `end_while` token. The code throws exceptions if there is a mismatch with the `[` and `]`. As for all the other tokens besides the while symbols, it just returns it but in tuple form.
 
-### Evaluator
+## Evaluator
 
 Since there is no concept of **scope** in BF, there is no need for an environment class. Instead the evaluator is itself a class that will simulate a BF runtime environment. 
 
@@ -158,10 +156,11 @@ match typ:
             self.eval_iter(expression_list)
 # code omitted
 ```
+
+And that's it! That was a broad overview of how the BF interpreter works.
+
 ---
 
-And that's it! That was a broad overview of how the BF interpreter works. My next step of the project is to make an interactive web interpreter in Javascript. Exciting.
+# View it in action
 
----
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FtMY8rxZjj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/FtMY8rxZjj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

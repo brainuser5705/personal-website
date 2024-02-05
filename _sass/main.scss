@@ -20,8 +20,8 @@ html, body{
         font-size: 2vh;
         margin: 1em 0%;
     
-        * { // all children will have original sizing
-            font-size: initial;
+        * { // all descendants will have same sizing
+            font-size: 1em;
         }
     }
 
@@ -147,6 +147,21 @@ main{
 
     img{
         width: 100%;
+    }
+
+    .pic{ // short for caption
+        color:rgb(114, 114, 114);
+        font-size: 2vh;
+        text-align:center;
+        font-style:italic;
+        line-height: 2;
+        margin: 2em 0%;
+    }
+
+    iframe{
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        margin: 2em 0px;
     }
 }
 
