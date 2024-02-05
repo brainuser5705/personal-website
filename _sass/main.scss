@@ -3,18 +3,11 @@
     src: url(MyFont.ttf);
 }
 
-.dark-mode {
-    color: white;
-    background-color: rgb(24, 24, 24);
-
-    a {
-
-    }
-}
-
 html, body{
     height: 100%;
     font-family: 'Inclusive Sans', sans-serif;
+    color: white;
+    background-color: rgb(24, 24, 24);
     
     p{
         font-size: 2vh;
