@@ -27,4 +27,4 @@ defaults:
       path: "_past/hackathon" 
       type: "past"
     values:
-      hackathon: true
+      hackathon: "some place"

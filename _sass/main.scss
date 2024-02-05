@@ -163,7 +163,14 @@ main{
     iframe{
         width: 100%;
         aspect-ratio: 16 / 9;
-        margin: 2em 0px;
+    }
+
+    hr + h1{ // for headers following a horizontal line, don't need a top margin
+        margin-top: initial;
+    }
+
+    h1{
+        margin: 1em auto;
     }
 }
 

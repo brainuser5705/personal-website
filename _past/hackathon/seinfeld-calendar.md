@@ -1,8 +1,9 @@
 ---
 name: Seinfeld Calendar
-description: (mostly) pure Javascript digital Seinfeld Calendar [M&T Hack and Meet submission]
+description: (mostly) pure Javascript digital Seinfeld Calendar
 time: 2022-11
 tech: js
+hackathon: M&T Hack and Meet 2
 icon: 
 github_repo: seinfield
 ---
