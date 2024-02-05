@@ -6,8 +6,8 @@
 html, body{
     height: 100%;
     font-family: 'Inclusive Sans', sans-serif;
-    color: white;
-    background-color: rgb(24, 24, 24);
+    color: #ebebeb;
+    background-color: #131516;
     
     p{
         font-size: 2vh;
@@ -19,10 +19,10 @@ html, body{
     }
 
     a{
-        color: #475e9e;
+        color: #90b1d7;
 
         &:hover{
-            color: #234297;
+            color: #6699d3;
         }
         
     }
@@ -33,7 +33,7 @@ html, body{
     
     font-family: 'Monofett', cursive;
     font-size: 7vh;
-    text-shadow: 0.5px 1px #b6b4b4;
+    // text-shadow: 0.5px 1px #b6b4b4;
 
 }
 
@@ -45,7 +45,7 @@ main{
 
         .section-heading{
             font-family: 'Monofett', cursive;
-            text-shadow: 0.5px 1px #8d8c8c;
+            // text-shadow: 0.5px 1px #8d8c8c;
             font-size: 5vh;
             text-align: center;
             margin: 10px 0px;
@@ -63,13 +63,16 @@ main{
             text-align: center;
     
             button{
-                background-color: #3654a9;
+                color: #e8e6e3;
+                background-color: #2b4387;
+                border-color: #2a6496;
                 font-size: large;
     
                 // attribute selector
                 &[aria-expanded="true"]{
                     font-size: x-large;
-                    background-color: #263d7c;
+                    color: #d8d4cf;
+                    background-color: #1e3163;
                 }
             }
             
@@ -95,7 +98,7 @@ main{
             padding: 0px;
             background-size: cover;
             background-position: center;
-            background-color: #f0eded;
+            background-color: #212425;
             
         }
     }
@@ -111,7 +114,7 @@ main{
         height: 15vh;
         background-size: cover; // zoom image to fit banner
         background-position: center;
-        background-color: #f0eded;
+        background-color: #212425;
         border: 1px solid;
     }
 
@@ -124,11 +127,11 @@ main{
 
     li{
         font-size: 1.5em; // relative to enclosing parent
-        color:rgb(114, 114, 114);
+        color:#d1cdc7;
  
-        // all descendants will be the same size
-        li {
-            font-size: 1em;
+        // all siblings will be the same size
+        ~ li {
+            font-size: 1.5em;
         }
     }
 
@@ -137,7 +140,7 @@ main{
     }
 
     .pic{ // short for caption
-        color:rgb(114, 114, 114);
+        color:#e8e6e3;
         font-size: 2vh;
         text-align:center;
         font-style:italic;
@@ -168,6 +171,9 @@ main{
     
 }
 
+.text-muted{
+    color: #d3d3d2 !important;
+}
 
 
 @media screen and (max-width: 900px){
