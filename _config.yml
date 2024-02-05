@@ -11,6 +11,8 @@ collections:
     output: true
   past:
     output: true
+  current:
+    output: true
 
 defaults:
   - scope:
@@ -28,3 +30,8 @@ defaults:
       type: "past"
     values:
       hackathon: "some place"
+  - scope:
+      path: ""
+      type: "current"
+    values:
+      layout: "project"

@@ -14,7 +14,7 @@ layout: default
             {{ page.description}}
         </div>
         <div class="mt-4 fs-2 fst-italic">
-            Created ~ {{ page.time }} <br>
+            {% if page.time %}Created ~ {{ page.time }} <br>{% endif %}
             {% if page.tech %}Tech Used ~ {{ page.tech | split: " " | join: ", " }}{% endif %}
         </div>
         <div>

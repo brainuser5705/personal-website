@@ -89,14 +89,6 @@ main{
         font-family: 'Inclusive Sans', sans-serif;
         border: 1px solid;
         margin: auto;
-
-        .tag{
-
-            border: 1.5px solid;
-            border-radius: 0.5em;
-            padding: 0.1em 0.3em;
-            
-        }
     
         .project-description{
             border-right: 1px solid;
@@ -172,6 +164,15 @@ main{
     h1{
         margin: 1em auto;
     }
+}
+
+// used by project rows and current project
+.tag{
+
+    border: 1.5px solid;
+    border-radius: 0.5em;
+    padding: 0.1em 0.3em;
+    
 }
 
 

@@ -11,7 +11,8 @@ permalink: /
         <p>
             <!-- {% assign page = site.pages | where_exp:"page" , "page.title == 'current'" | first %}
             {{ page.content }} -->
-            {% include current.md %}
+            {% capture current %}{% include current.md %}{% endcapture %}
+            {{ current | markdownify }}
         </p>
     </section>
 
@@ -31,8 +32,13 @@ permalink: /
                     <div class="fs-5 fw-bold">
                         {{ project.time }}
                     </div>
-                    <div class="project-tag text-muted fst-italic">
-                        Tech Used: {{ project.tech | join: ','}}
+                    <div class="text-muted fst-italic">
+                        {% if project.tech %}
+                            {% assign techs = project.tech | split: " " %}
+                            {% for tech in techs %}
+                            <inline class="tag">{{ tech }}</inline>
+                            {% endfor %}
+                        {% endif %}
                     </div>
                 </div>
                 <div class="col-md-7 project-image" 
