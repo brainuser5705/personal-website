@@ -125,14 +125,16 @@ main{
     margin: auto;
     margin-top: 5vh;
 
-    li{
+    ul, ol{
         font-size: 1.5em; // relative to enclosing parent
         color:#d1cdc7;
  
-        // all siblings will be the same size
-        ~ li {
-            font-size: 1.5em;
+        // all descendants and siblings will be the same size
+        ul {
+            font-size: 1em;
         }
+
+
     }
 
     img{
