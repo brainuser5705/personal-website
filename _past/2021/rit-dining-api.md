@@ -1,13 +1,13 @@
 ---
 name: RIT Dining API
-description: Webscrapes RIT online dining menus and interfaces data with an API
+description: webscrapes RIT online dining menus and interfaces data with an API
 time: 2021-12
 tech: python flask beautifulsoup
 github: /rit-dining-api-no-db
-image: https://www.rit.edu/fa/diningservices/sites/rit.edu.fa.diningservices/files/styles/dining_loc_lg/public/ArtesanoView.jpg?itok=4lassH_0
+icon: https://www.rit.edu/fa/diningservices/sites/rit.edu.fa.diningservices/files/styles/dining_loc_lg/public/ArtesanoView.jpg?itok=4lassH_0
 ---
 
-*This project has been paused (more explanation below)*.
+# Project has been abandoned because of impraticality.
 
 ---
 
@@ -25,7 +25,7 @@ I was able to create a prototype/proof-of-concept for the API back in the spring
 
 Some technical notes: I had no idea how to design the JSON format. And the original idea involved inserting the webscraped data into a database as well. But that didn't work out, so right now all it does is webscrapes and sends back the JSON.
 
-**You can check out the API here** (*If you see no data, read the section below.*): [https://rit-dining-api-no-db.herokuapp.com/specials](https://rit-dining-api-no-db.herokuapp.com/specials)
+> I was able to a working version on Heroku, unforunately they have ended their free dyno program so it is not deployed anymore.
 
 ---
 

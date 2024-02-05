@@ -35,8 +35,8 @@ permalink: /
                         Tech Used: {{ project.tech | join: ','}}
                     </div>
                 </div>
-                <div class="col-md-7 project-image">
-                    {% if project.icon %}<img src="{{ project.icon }}">{% endif %}
+                <div class="col-md-7 project-image" 
+                    style="background-image: url({{project.icon}}); {% if project.icon %}min-height: 10vh;{% endif %}">
                 </div>
             </div>
             {% endfor %}
@@ -103,8 +103,8 @@ permalink: /
                 </div>
                 <div id="noninteractive" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
                     <p>
-                        These projects are not available. Either they didn't make it past the development stage or I
-                        don't want to bother with the last step of getting them onto the web. <b>The links here are for
+                        These projects are not available to use. Either they didn't make it past the development stage or I
+                        don't want to bother with the last step of getting them running on a server, etc. <b>The links here are for
                             documentation purposes.</b>
                     </p>
                     {% assign sorted_projects = site.past | sort: "time" | reverse %}
