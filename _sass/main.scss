@@ -1,56 +1,29 @@
 @font-face {
     font-family: MyFont;
     src: url(MyFont.ttf);
-  }  
+}
+
+.dark-mode {
+    color: white;
+    background-color: rgb(24, 24, 24);
+
+    a {
+
+    }
+}
 
 html, body{
     height: 100%;
     font-family: 'Inclusive Sans', sans-serif;
-    // font-family: 'Share Tech Mono', monospace;
-}
-
-main{
-    min-height: calc(100% - 220px);
-}
-
-p{
-    font-size: 1.5em;
-    margin: 1em 0%;
-}
-
-.project-page-header{
-
-    margin-top: 6vh;
-
-    .project-page-banner{
-        width: 100%;
-        height: 15vh;
-        object-fit: cover;
-        border: 1px solid;
-    }
-}
-
-section{
-    margin: 6vh auto;
-}
-
-.project-page{
-    font-size: 1em;
-}
-
-.section-heading{
-    font-family: 'Monofett', cursive;
-    text-shadow: 0.5px 1px #8d8c8c;
-    font-size: 5vh;
-    text-align: center;
-    margin: 10px 0px;
-}
-
-.header-title{
     
-    font-family: 'Monofett', cursive;
-    font-size: 7vh;
-    text-shadow: 0.5px 2px #8d8c8c;
+    p{
+        font-size: 2vh;
+        margin: 1em 0%;
+    
+        * { // all children will have original sizing
+            font-size: initial;
+        }
+    }
 
     a{
         color: #475e9e;
@@ -63,37 +36,113 @@ section{
 
 }
 
-.project{
+.header-title{
     
-    font-family: 'Inclusive Sans', sans-serif;
-    border: 1px solid;
-    margin: auto;
+    font-family: 'Monofett', cursive;
+    font-size: 7vh;
+    text-shadow: 0.5px 1px #b6b4b4;
 
-    .project-description{
-        border-right: 1px solid;
-        padding: 1em;
-        // scrollbar-width: none;
-        // overflow-y: scroll;
+}
+
+main{
+    min-height: calc(100% - 220px);
+
+    section{
+        margin: 6vh auto;
+
+        .section-heading{
+            font-family: 'Monofett', cursive;
+            text-shadow: 0.5px 1px #8d8c8c;
+            font-size: 5vh;
+            text-align: center;
+            margin: 10px 0px;
+        }
+
     }
 
-    .project-image{
-
-        padding: 0px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+    #projectAccordion{
+    
+        > * {
+            margin-top: 1em;
+        }
+    
+        #projectAccordion-buttons{
+            text-align: center;
+    
+            button{
+                background-color: #3654a9;
+                font-size: large;
+    
+                // attribute selector
+                &[aria-expanded="true"]{
+                    font-size: x-large;
+                    background-color: #263d7c;
+                }
+            }
+            
+        }
         
     }
+
+    .project{
+    
+        font-family: 'Inclusive Sans', sans-serif;
+        border: 1px solid;
+        margin: auto;
+
+        .tag{
+
+            border: 1.5px solid;
+            border-radius: 0.5em;
+            padding: 0.1em 0.3em;
+            
+        }
+    
+        .project-description{
+            border-right: 1px solid;
+            padding: 1em;
+            // scrollbar-width: none;
+            // overflow-y: scroll;
+        }
+    
+        .project-image{
+    
+            padding: 0px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+        }
+    }
+
+}
+
+.project-page-header{
+
+    margin-top: 6vh;
+
+    .project-page-banner{
+        width: 100%;
+        height: 15vh;
+        object-fit: cover;
+        border: 1px solid;
+    }
+
 }
 
 .project-content{
 
     margin: auto;
     margin-top: 5vh;
-    font-size: 1em;
 
     li{
-        font-size: 1.5em;
+        font-size: 1.5em; // relative to enclosing parent
+        color:rgb(114, 114, 114);
+ 
+        // all descendants will be the same size
+        li {
+            font-size: 1em;
+        }
     }
 
     img{
@@ -101,37 +150,7 @@ section{
     }
 }
 
-.tag{
 
-    border: 1.5px solid;
-    border-radius: 0.5em;
-    padding: 0.1em 0.3em;
-    
-}
-
-#projectAccordion{
-    
-    > * {
-        margin-top: 1em;
-    }
-
-    #projectAccordion-buttons{
-        text-align: center;
-
-        button{
-            background-color: #3654a9;
-            font-size: large;
-
-            // attribute selector
-            &[aria-expanded="true"]{
-                font-size: x-large;
-                background-color: #263d7c;
-            }
-        }
-        
-    }
-    
-}
 
 @media screen and (max-width: 900px){
     .project-metrics {

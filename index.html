@@ -54,15 +54,15 @@ permalink: /
 
             <div id="projectAccordion-buttons">
                 <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#interactive"
-                    aria-expanded="false" aria-controls="interactive" onclick="setCookie('interactive')">
+                    aria-expanded="false" aria-controls="interactive" onclick="setCookie('interactive'); updateButtons();">
                     Interactive
                 </button>
                 <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#noninteractive"
-                    aria-expanded="false" aria-controls="noninteractive" onclick="setCookie('noninteractive')">
+                    aria-expanded="false" aria-controls="noninteractive" onclick="setCookie('noninteractive'); updateButtons();">
                     Non-interactive
                 </button>
                 <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hackathon"
-                    aria-expanded="false" aria-controls="hackathon" onclick="setCookie('hackathon')">
+                    aria-expanded="false" aria-controls="hackathon" onclick="setCookie('hackathon'); updateButtons();">
                     Hackathon
                 </button>
             </div>

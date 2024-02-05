@@ -1,6 +1,5 @@
 function setCookie(type){
     document.cookie = "type="+type;
-    updateButtons();
 }
 
 function isSelected(type){
