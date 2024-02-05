@@ -2,6 +2,7 @@
 name: Brainf**k Interpreter
 description: making an interpreter for the Brainf**k programming language
 time: 2022-05
+icon: https://onestepcode.com/wp-content/uploads/2020/10/brainfuck_code.png
 tech: python
 ---
 

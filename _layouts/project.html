@@ -5,7 +5,7 @@ layout: default
 <div class="project-page mx-auto" style="max-width: 900px;">
     <div class="project-page-header">
         {% if page.icon %}
-            <img class="project-page-banner" src="{{page.icon}}">
+            <div class="project-page-banner" style="background-image: url({{page.icon}});"></div>
         {% endif %}
         <div class="display-2 mt-3 fw-bold">
             {{ page.name }}

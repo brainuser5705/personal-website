@@ -108,9 +108,9 @@ main{
         .project-image{
     
             padding: 0px;
-            background-repeat: no-repeat;
-            background-size: cover;
+            // background-size: cover;
             background-position: center;
+            background-color: #f0eded;
             
         }
     }
@@ -124,7 +124,9 @@ main{
     .project-page-banner{
         width: 100%;
         height: 15vh;
-        object-fit: cover;
+        // background-size: cover; // zoom image to fit banner
+        background-position: center;
+        background-color: #f0eded;
         border: 1px solid;
     }
 
