@@ -3,7 +3,7 @@ name: auto emailer
 description: Python script to automate mass emailing tasks for my supplemental instructor job
 time: 2021-09
 tech: python gmail-api
-icon: /assets/images/autoemailer_icon.png
+icon: https://i.imgur.com/HZu3TTV.png
 github_repo: auto-emailer
 ---
 

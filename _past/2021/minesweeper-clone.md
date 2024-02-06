@@ -3,7 +3,6 @@ name: minesweeper clone
 description: Minesweeper clone in Java
 time: 2021-03
 tech: java javafx
-github_repo: cmdline-minesweeper
 icon: https://github.com/brainuser5705/minesweeper-gui/blob/main/src/gui/resources/rose_playing.png?raw=true
 github_repo: minesweeper-gui
 ---
