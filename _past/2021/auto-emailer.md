@@ -44,9 +44,12 @@ The way the sending functionality works (aka the <code>send</code> function) is 
 
 #### Command line!
 
-The user interface is just a nice colored command line interface using the `colorama` and `termcolor` module which provides functions for printing colored text on the terminal, configured to allow me to backtrack if I ever make a mistake. Here's an image of it:
+The user interface is just a nice colored command line interface using the `colorama` and `termcolor` module which provides functions for printing colored text on the terminal, configured to allow me to backtrack if I ever make a mistake.
 
-![](https://i.imgur.com/HZu3TTV.png)
+<div class="pic">
+<img src="https://i.imgur.com/HZu3TTV.png">
+The user interface
+</div>
 
 ---
 
