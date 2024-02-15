@@ -20,9 +20,15 @@ time: 2024-02
 
 # Log
 
+2/15/2023
+- Was working on the Automatic Dog Feeder Arduino project, then fell into a rut, but back at it again
+- Worked through Chapter 3 of the book, learned about how hardware registers are used in code and how a MOSFET works
+
 2/1/2023
 - TTIL to not buy kits if I will not be using 95% of the things in it
 - Instead order the required components separately and only pay for what you need
+
+**~Took a break because of other interests~**
 
 12/28/2023
 

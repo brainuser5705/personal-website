@@ -1,9 +1,17 @@
 ---
-name: Guide to Windows and Linux AVR Development Toolchains
+name: Guide to Windows AVR Development Toolchains
 draft: true
 ---
 
 # Setting up Toolchain
+
+## Windows with `avr-gcc`
+- two options: Atmel Studio vs [WinAVR](http://sourceforge.net/projects/winavr/files/WinAVR/20100110/)
+- make sure to change your `PATH` variable with WinAVR to allow commands (` make`, `avrdude`, `avr-gcc`) to be available without needing to type the entire path
+
+## Arduino IDE
+
+Read below.
 
 # Using the Arduino
 
@@ -31,34 +39,30 @@ The pins of the ATmega chip on the Arduino **corresponds** to the I/O pins expos
 ## Flash Programmer (Chip is External, Arduino is just the programmer)
 
 ### Circuitry
-
 Hook up the Arduino to the chip on the breadboard. Connect the essential six connections:
 - VCC, GND, RESET, SCK, MISO, MOSI
 
 ### Flashing
 
 #### Arduino IDE
-
 1. Flash example code *ArduinoISP* (converts Arduino to Arduino In-System Programmer)
 2. Tools > Programmer > Arduino as ISP
 3. Tools > Board > Arduino Pro Mini
 4. Processor > ATmega168 (3.3V, 8MHz)
 5. Shift + Ctrl + U to upload
 
+
 ### `avr-gcc` toolchain
-
-#### Windows
-
-1. Edit Makefile
-2. Edit `MCU=atmega168`
-
-#### Linux
-
-1. Edit Makefile
-2. Ensure correct ports
+1. Flash example code *ArduinoISP* (converts Arduino to Arduino In-System Programmer)
+2. Edit Makefile so it know how to use the Arduino programmer:
+```
+PROGRAMMER_TYPE = avrisp
+PROGRAMMER_ARGS = -b 19200 -P com5 # or whatever port it is
+```
+3. Edit `MCU=atmega168`
+4. Flash the code: `make flash`
 
 # Flash Programmer (USBasp)
-
 1. Need to install driver with Zadig
 2. Some warning about sck, resolve by updating the firmware
     But need to solder on header pins for the programming mode switch with jumpers
