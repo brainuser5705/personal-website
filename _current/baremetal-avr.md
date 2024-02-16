@@ -1,6 +1,6 @@
 ---
 name: baremetal avr
-description: wiki for things learned as I follow 'Make&#58; AVR Programming' by Elliot Williams
+description: log and wiki for things learned as I follow 'Make&#58; AVR Programming' by Elliot Williams
 focus: avr c
 time: 2024-02
 ---
@@ -19,12 +19,15 @@ time: 2024-02
 <hr>
 
 # Log
+2/18/2024
+- Worked through Chapter 4 of the book
+    - learned about the common bit operations (bit twiddling as it's reffered to in the book), `_BV()` macro, and the loop condition `i < 255` when working with unsigned integers
 
-2/15/2023
+2/15/2024
 - Was working on the Automatic Dog Feeder Arduino project, then fell into a rut, but back at it again
 - Worked through Chapter 3 of the book, learned about how hardware registers are used in code and how a MOSFET works
 
-2/1/2023
+2/1/2024
 - TTIL to not buy kits if I will not be using 95% of the things in it
 - Instead order the required components separately and only pay for what you need
 
