@@ -5,12 +5,27 @@ focus: arduino basic-electronics
 time: 2024-02
 ---
 
+These are small Arduino projects to introduce me to basic electrical concepts.
+
 # Simon Says
 
 <iframe src="https://www.youtube.com/embed/M-Pe4tOBU7M?si=T-x4ymdAYy-eqiQi&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+## Features
+- "touch sensors" with piezo transducers
+- LCD
+
+## Development Notes
+- Used [`LiquidCrystalIO` library](https://github.com/davetcc/LiquidCrystalIO) by Adafruit
+```c
+#include <LiquidCrystalIO.h>
+#include <IoAbstractionWire.h>
+#include <Wire.h>
+```
+
 ## Resources/Tutorials Used
 - [How to use a piezo transducer as a touch sensor](https://docs.arduino.cc/built-in-examples/sensors/Knock/)
+- [Basic workings of LCD display with I2C adapter](https://lastminuteengineers.com/i2c-lcd-arduino-tutorial/)
 
 ---
 
@@ -22,6 +37,8 @@ time: 2024-02
 <img src="https://i.imgur.com/I6re0rQ.jpeg">
 Clockwise: 1) Funnel design for box, 2) Pockets for trapped kibble leading to jam when closing, 3) Internal circutry and wiring
 </div>
+
+## [Github](https://github.com/brainuser5705/automatic-dog-feeder)
 
 ## Features
 - 3 triggers: Bluetooth, physical button, scheduled (in code)

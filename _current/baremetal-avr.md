@@ -19,6 +19,13 @@ time: 2024-02
 <hr>
 
 # Log
+
+2/20/24
+- Working through Chapter 5
+    - bought FTDI cable from [Amazon](https://www.amazon.com/dp/B06ZYPLFNB?psc=1&ref=ppx_yo2ov_dt_b_product_details) and had to install driver from [official website](https://ftdichip.com/drivers/) (simple installation process, just have the cable plugged in while it installs)
+    - read through the UART0 section of [datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf) and code for UART functions - essentially figuring out which bits in which registers to set with the help of mnemonic definitions
+    - plan for next session is to write it down (for memory sake), probably solder up the speaker, and work on the chapter's project
+
 2/18/2024
 - Worked through Chapter 4 of the book
     - learned about the common bit operations (bit twiddling as it's reffered to in the book), `_BV()` macro, and the loop condition `i < 255` when working with unsigned integers
