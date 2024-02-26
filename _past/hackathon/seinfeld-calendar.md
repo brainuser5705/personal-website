@@ -8,7 +8,7 @@ icon:
 github_repo: seinfield
 ---
 
-<iframe src="https://www.youtube-nocookie.com/embed/ey7yZy0BcZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://youtu.be/usbY9LJOrng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # About
 

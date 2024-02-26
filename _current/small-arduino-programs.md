@@ -16,6 +16,7 @@ These are small Arduino projects to introduce me to basic electrical concepts.
 - LCD
 
 ## Development Notes
+- [Circuit diagram (excluding LCD)](https://www.digikey.com/en/schemeit/project/simon-says-51d0543eb37b4b4bafd7744fbdb79bc4)
 - Used [`LiquidCrystalIO` library](https://github.com/davetcc/LiquidCrystalIO) by Adafruit
 ```c
 #include <LiquidCrystalIO.h>
@@ -30,6 +31,8 @@ These are small Arduino projects to introduce me to basic electrical concepts.
 ---
 
 # Automatic Dog Feeder
+
+## Prototype 1
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3-qOSz9pvas?si=J34xJEUi--Gsj9in&autoplay=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
