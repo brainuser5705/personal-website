@@ -2,10 +2,10 @@ I am interested in delving deeper into how the underlying software and hardware 
 
 Currently as of 2024.01, I am focusing on building proficiency in the C programming language and learning baremetal programming on the Atmel AVR microcontroller.
 
-It's going to be a very long journey, but here is **a continually updating list of projects that I am doing**: 
+It's going to be a very long journey, but here is **a continually updating list of projects that I am doing** (most recent, first): 
 
 <ul style="font-size: 2.5vh;">
-{% assign current = site.current | where_exp:"item", "item.focus" %}
+{% assign current = site.current | where_exp:"item", "item.focus" | sort: "time" %}
 {% for page in current %}
 <li><a href="{{ page.url }}">{{ page.name }}</a>
 {% assign fs = page.focus | split: " " %}

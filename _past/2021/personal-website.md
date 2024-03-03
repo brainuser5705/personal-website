@@ -1,8 +1,9 @@
 ---
 name: Personal Website
-description: My personal website
+description: Development timeline of my personal website
 time: 2021~05
 tech: web-dev
+permalink: /personal-website
 ---  
   
 Over the past year, I have been developing my personal website and gone through several iterations while I experimented with different web development technologies. Here is a visual timeline of the landing page of my website. I will also include some notes about the features, the languages/technologies I used, and the general development process for each version.

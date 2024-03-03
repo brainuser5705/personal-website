@@ -77,8 +77,7 @@ permalink: /
             <div id="projectAccordion-lists">
                 <div id="interactive" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
                     <p>
-                        These projects are completed, deployed and ready to use. For web-based projects, just click on
-                        the link!
+                        These projects are completed and ready to be use! Web-based projects are deployed, just click on the link! Other projects require manual installation, most of which should be explained in the README.md of the Github repo.
                     </p>
                     {% assign interactive = site.past | where_exp:"project", "project.permalink" | sort: "time" |
                     reverse %}
@@ -109,8 +108,8 @@ permalink: /
                 </div>
                 <div id="noninteractive" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
                     <p>
-                        These projects are not available to use. Either they didn't make it past the development stage or I
-                        don't want to bother with the last step of getting them running on a server, etc. <b>The links here are for
+                        These projects are not available to use. Either they didn't make it past the development stage, or require some workaround when setting it up on your machine, or I
+                        didn't want to bother with the last step of getting them running on a server. <b>The links here are for
                             documentation purposes.</b>
                     </p>
                     {% assign sorted_projects = site.past | sort: "time" | reverse %}
