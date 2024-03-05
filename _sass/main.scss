@@ -126,10 +126,10 @@ main{
     margin-top: 5vh;
 
     ul, ol{
-        font-size: 1em; // relative to enclosing parent
+        font-size: 2vh; // relative to enclosing parent
         color:#d1cdc7;
  
-        // all descendants and siblings will be the same size
+        all descendants and siblings will be the same size
         ul, ol {
             font-size: 1em;
         }
