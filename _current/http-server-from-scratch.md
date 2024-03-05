@@ -9,7 +9,14 @@ time: 2024-03
 
 Each log links to a page for each "subproject" building up to the end. They include links to documentation and general things learned during that time.
 
-- 3/2/24 - [Basic Binding and Printing out Socket Address](./http-server-progress/basic-bind)
+{% assign current = site.current | where_exp:"item", "item.url contains 'http-server-progress'" | sort: "time" %}
+<ul>
+{% for page in current %}
+    <li>
+    {{ page.time }} - <a href="{{ page.url }}">{{ page.name }}</a>
+    </li>
+{% endfor %}
+</ul>
 
 # About
 
