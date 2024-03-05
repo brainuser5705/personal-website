@@ -35,8 +35,7 @@ customizable and open source. So yea, why not.
 
 ## What distro?
 
-Probably keep it simple and go with Ubuntu. Or Pop OS. Or I could distro hop.
-The main point is, contrary to Windows, I get to explore with Linux.
+~~Probably keep it simple and go with Ubuntu. Or PopOS.~~ Gonna go all in with ArchLinux. Using Arch will teach me a lot more about Linux than going with an "pre-configured" distro. And one of Arch's main principles is keep it simple, which is what I want.
 
 # Part 1 - Buying another drive
 
@@ -57,3 +56,5 @@ accessory than necessity. Other [factors to consider](https://www.tomshardware.c
 Now in all honesty, I have no idea what QLC, TLC, DRAM vs DRAM-less actually mean. They appeared in the article...but the article did say the average consumer shouldn't worry abou them. From what I've gathered in the Reddit posts is that TLC and DRAM are better. That's good enough for me.
 
 # Part 2 - Installation
+
+

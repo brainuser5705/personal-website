@@ -9,7 +9,7 @@ These are small Arduino projects to introduce me to basic electrical concepts.
 
 # Simon Says
 
-<iframe src="https://www.youtube.com/embed/M-Pe4tOBU7M?si=T-x4ymdAYy-eqiQi&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/M-Pe4tOBU7M?si=T-x4ymdAYy-eqiQi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Features
 - "touch sensors" with piezo transducers
@@ -34,7 +34,7 @@ These are small Arduino projects to introduce me to basic electrical concepts.
 
 ## Prototype 1
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3-qOSz9pvas?si=J34xJEUi--Gsj9in&autoplay=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3-qOSz9pvas?si=J34xJEUi--Gsj9in" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <div class="pic">
 <img src="https://i.imgur.com/I6re0rQ.jpeg">
