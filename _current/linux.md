@@ -35,7 +35,7 @@ customizable and open source. So yea, why not.
 
 ## What distro?
 
-~~Probably keep it simple and go with Ubuntu. Or PopOS.~~ Gonna go all in with ArchLinux. Using Arch will teach me a lot more about Linux than going with an "pre-configured" distro. And one of Arch's main principles is keep it simple, which is what I want.
+~~Probably keep it simple and go with Ubuntu. Or PopOS.~~ Gonna go all in with ArchLinux. Using Arch will teach me a lot more about Linux than going with an "pre-configured" distro. And one of Arch's main principles is keep it simple, which is what I want. Note that I have no idea what I'm doing.
 
 # Part 1 - Buying another drive
 

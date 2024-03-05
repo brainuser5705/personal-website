@@ -18,6 +18,12 @@ Each log links to a page for each "subproject" building up to the end. They incl
 {% endfor %}
 </ul>
 
+## Targets
+
+- implement concurrency for multiple connections
+- `fdopen()`
+- expand to IP addresses
+
 # About
 
 My current project is to build a HTTP server from scratch (read more below about what I deemed as "from stratch").
