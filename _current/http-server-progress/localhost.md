@@ -1,5 +1,5 @@
 ---
-name: Basic Echo Server
+name: Localhost Server
 layout: project
 time: 2024-03-06
 ---
