@@ -20,9 +20,10 @@ Each log links to a page for each "subproject" building up to the end. They incl
 
 ## Targets
 
-- implement concurrency for multiple connections
-- `fdopen()`
-- expand to IP addresses
+- [X] Bind server to IP address (*achieved 3/6/24*)
+- [ ] Implement HTTP Protocol
+- [ ] Implement concurrency to allow multiple connections
+- [ ] Research security risks and implement safeguards
 
 # About
 
