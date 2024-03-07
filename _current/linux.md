@@ -35,7 +35,11 @@ customizable and open source. So yea, why not.
 
 ## What distro?
 
-~~Probably keep it simple and go with Ubuntu. Or PopOS.~~ Gonna go all in with ArchLinux. Using Arch will teach me a lot more about Linux than going with an "pre-configured" distro. And one of Arch's main principles is keep it simple, which is what I want. Note that I have no idea what I'm doing.
+~~Probably keep it simple and go with Ubuntu. Or PopOS.~~ 
+
+~~Gonna go all in with ArchLinux. Using Arch will teach me a lot more about Linux than going with an "pre-configured" distro. And one of Arch's main principles is keep it simple, which is what I want. Note that I have no idea what I'm doing.~~
+
+Okay, I just tried to install Arch with a VM...and I had no idea what I was doing. The ArchWiki installation guide was very comprehensive to say the least, as how the Arch community advertises it. There were a lot of ancronyms and terminology that I did not know and clicking on the links would have just led me down a rabbit hole. In other words, Arch be too advanced for me right now. So I guess I have to stick with the "newbie" distro and work my way up (or down technically) from there. I sort of don't want to go with Ubuntu cause I've already used it before...I'll do some research and make it a pick.
 
 # Part 1 - Buying another drive
 
