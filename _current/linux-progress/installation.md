@@ -1,8 +1,8 @@
-```
+---
 name: Installation Process
 layout: project
 time: 2024-03-09
-```
+---
 
 # Part 1 - Buying another drive
 
