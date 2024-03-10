@@ -5,7 +5,7 @@ focus: linux
 time: 2024-03
 ---
 
-{% assign current = site.current | where_exp:"item", "item.url contains 'linux/'" | sort: "time" %}
+{% assign current = site.current | where_exp:"item", "item.url contains 'linux-progress'" | sort: "time" %}
 <ul>
 {% for page in current %}
     <li>
