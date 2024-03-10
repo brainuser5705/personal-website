@@ -12,6 +12,7 @@ time: 2024-03
     <a href="{{page.url}}">{{page.name}}</a>
     </li>
 {% endfor %}
+</ul>
 
 # What's the deal?
 
