@@ -1,9 +1,11 @@
 ---
-name: transitioning to linux
-description: making linux my main os for good
+name: Linux and FOSS
+description: making linux my main os
 focus: linux
-time: 2024-03
+time: 2024-03-09
 ---
+
+Below are pages recording my learning journey in Linux and FOSS:
 
 {% assign current = site.current | where_exp:"item", "item.url contains 'linux-progress'" | sort: "time" %}
 <ul>
@@ -13,6 +15,8 @@ time: 2024-03
     </li>
 {% endfor %}
 </ul>
+
+---
 
 # What's the deal?
 
